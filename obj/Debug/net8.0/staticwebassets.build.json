@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "AA4GpOWbOfIiXC+7FgQ3sS7AeFAIwhybY5eMNQ3gcYU=",
+  "Source": "MvcMovie",
+  "BasePath": "_content/MvcMovie",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MvcMovie/wwwroot",
+      "Source": "MvcMovie",
+      "ContentRoot": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/",
+      "BasePath": "_content/MvcMovie",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/css/site.css",
+      "SourceId": "MvcMovie",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/",
+      "BasePath": "_content/MvcMovie",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/js/site.js",
+      "SourceId": "MvcMovie",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/",
+      "BasePath": "_content/MvcMovie",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/site.js"
+    }
+  ]
+}

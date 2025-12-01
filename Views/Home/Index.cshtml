@@ -1,0 +1,43 @@
+@model IEnumerable<Movie>
+
+@{
+    ViewData["Title"] = "Lista de Películas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a MvcMovie</h1>
+    <p>Una aplicación simple de ASP.NET Core MVC</p>
+</div>
+
+<div class="movie-list">
+    <h2>Películas Destacadas</h2>
+    
+    @if (Model != null && Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Fecha de Estreno</th>
+                    <th>Género</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var pelicula in Model)
+                {
+                    <tr>
+                        <td>@pelicula.Title</td>
+                        <td>@pelicula.ReleaseDate.ToString("dd/MM/yyyy")</td>
+                        <td>@pelicula.Genre</td>
+                        <td>$@pelicula.Price</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No hay películas disponibles.</p>
+    }
+</div>
