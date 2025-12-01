@@ -1,4 +1,4 @@
-namespace MvcMovie.Models;
+namespace ari2._0.Models;
 
 public class Movie
 {

@@ -1,0 +1,1472 @@
+{
+  "countries": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "genders": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "actor_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "phone_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "address_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "states": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "countries_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "cities": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "states_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "municipalities": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "cities_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "code",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "neighborhoods": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "municipalities_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "code",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "zip_codes": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "neighborhoods_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "actors": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actor_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "genders_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "nationality_countries_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "title",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "prefix",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "suffix",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_pep",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "first_first_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "second_first_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "last_first_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "last_second_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "birthday_at",
+      "data_type": "date",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "other_data",
+      "data_type": "json",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "customers": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "customer_public_status_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_agent_retention",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "is_leasing",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "other_data",
+      "data_type": "json",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "phones": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "phone_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "extension",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "number",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_verified",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "emails": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "definition",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_notification",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "is_unsuscribed",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "unsuscribed_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_failed",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "faliled_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_primary",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "addresses": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "address_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "zip_codes_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "street",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "apartment",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_verified",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "latitude",
+      "data_type": "numeric",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "longitude",
+      "data_type": "numeric",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "identity_cards": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "idcard_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "idcard",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "identity_card_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_private",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "actor_relationships": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "parent_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "child_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "relationship_types_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_percentage",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "relationship_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "parent_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "system_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_percentage",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "is_allowed",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "social_networks": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "actors_id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "platform",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "profile_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "profile_url",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ],
+  "customer_public_status_types": [
+    {
+      "column_name": "id",
+      "data_type": "uuid",
+      "max_length": null,
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v7()"
+    },
+    {
+      "column_name": "name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "system_name",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "order",
+      "data_type": "integer",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_private",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "false"
+    },
+    {
+      "column_name": "created_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "created_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "updated_at",
+      "data_type": "timestamp without time zone",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP"
+    },
+    {
+      "column_name": "updated_by",
+      "data_type": "character varying",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": null
+    },
+    {
+      "column_name": "is_enabled",
+      "data_type": "boolean",
+      "max_length": null,
+      "is_nullable": "YES",
+      "column_default": "true"
+    }
+  ]
+}

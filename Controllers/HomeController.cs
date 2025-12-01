@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using MvcMovie.Models;
+using ari2._0.Models;
 
-namespace MvcMovie.Controllers;
+namespace ari2._0.Controllers;
 
 public class HomeController : Controller
 {

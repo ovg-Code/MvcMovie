@@ -1,43 +1,108 @@
-@model IEnumerable<Movie>
-
 @{
-    ViewData["Title"] = "Lista de Películas";
+    ViewData["Title"] = "Inicio";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenido a MvcMovie</h1>
-    <p>Una aplicación simple de ASP.NET Core MVC</p>
+    <h1 class="display-4">ARIV2 CRM</h1>
+    <p class="lead">Sistema de Gestión de Relaciones con Clientes</p>
 </div>
 
-<div class="movie-list">
-    <h2>Películas Destacadas</h2>
-    
-    @if (Model != null && Model.Any())
-    {
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Título</th>
-                    <th>Fecha de Estreno</th>
-                    <th>Género</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var pelicula in Model)
-                {
-                    <tr>
-                        <td>@pelicula.Title</td>
-                        <td>@pelicula.ReleaseDate.ToString("dd/MM/yyyy")</td>
-                        <td>@pelicula.Genre</td>
-                        <td>$@pelicula.Price</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>No hay películas disponibles.</p>
-    }
+<div class="row mt-5">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5>👥 Clientes</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Actors" asp-action="Index">Actores</a></li>
+                    <li><a asp-controller="Customers" asp-action="Index">Clientes</a></li>
+                    <li><a asp-controller="ActorRelationships" asp-action="Index">Relaciones</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h5>📞 Contacto</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Phones" asp-action="Index">Teléfonos</a></li>
+                    <li><a asp-controller="Emails" asp-action="Index">Correos Electrónicos</a></li>
+                    <li><a asp-controller="Addresses" asp-action="Index">Direcciones</a></li>
+                    <li><a asp-controller="SocialNetworks" asp-action="Index">Redes Sociales</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5>🪪 Identificación</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a asp-controller="IdentityCards" asp-action="Index">Documentos de Identidad</a></li>
+                    <li><a asp-controller="IdentityCardTypes" asp-action="Index">Tipos de Documento</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-warning text-dark">
+                <h5>📍 Ubicaciones</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Countries" asp-action="Index">Países</a></li>
+                    <li><a asp-controller="States" asp-action="Index">Estados</a></li>
+                    <li><a asp-controller="Cities" asp-action="Index">Ciudades</a></li>
+                    <li><a asp-controller="Municipalities" asp-action="Index">Municipios</a></li>
+                    <li><a asp-controller="Neighborhoods" asp-action="Index">Barrios</a></li>
+                    <li><a asp-controller="ZipCodes" asp-action="Index">Códigos Postales</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-secondary text-white">
+                <h5>📋 Catálogos</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled">
+                    <li><a asp-controller="Genders" asp-action="Index">Géneros</a></li>
+                    <li><a asp-controller="ActorTypes" asp-action="Index">Tipos de Actor</a></li>
+                    <li><a asp-controller="PhoneTypes" asp-action="Index">Tipos de Teléfono</a></li>
+                    <li><a asp-controller="AddressTypes" asp-action="Index">Tipos de Dirección</a></li>
+                    <li><a asp-controller="RelationshipTypes" asp-action="Index">Tipos de Relación</a></li>
+                    <li><a asp-controller="CustomerPublicStatusTypes" asp-action="Index">Estados de Cliente</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <div class="card-header bg-dark text-white">
+                <h5>📊 Estadísticas</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Total de Módulos:</strong> 21</p>
+                <p><strong>Controladores:</strong> 21</p>
+                <p><strong>Vistas:</strong> 105</p>
+                <p><strong>Base de Datos:</strong> PostgreSQL</p>
+                <p><strong>Framework:</strong> ASP.NET Core MVC</p>
+            </div>
+        </div>
+    </div>
 </div>

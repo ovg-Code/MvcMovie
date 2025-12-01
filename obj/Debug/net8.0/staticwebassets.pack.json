@@ -1,28 +1,28 @@
 {
   "Files": [
     {
-      "Id": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/css/site.css",
+      "Id": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/oscar_dev/workspace/grupoTX/ari2_0/MvcMovie/wwwroot/js/site.js",
+      "Id": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MvcMovie.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ari2.0.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MvcMovie.props",
-      "PackagePath": "build\\MvcMovie.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ari2.0.props",
+      "PackagePath": "build\\ari2.0.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MvcMovie.props",
-      "PackagePath": "buildMultiTargeting\\MvcMovie.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ari2.0.props",
+      "PackagePath": "buildMultiTargeting\\ari2.0.props"
     },
     {
-      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MvcMovie.props",
-      "PackagePath": "buildTransitive\\MvcMovie.props"
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ari2.0.props",
+      "PackagePath": "buildTransitive\\ari2.0.props"
     }
   ],
   "ElementsToRemove": []
