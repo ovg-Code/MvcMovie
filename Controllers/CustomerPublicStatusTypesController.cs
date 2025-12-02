@@ -1,158 +1,85 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using ari2._0.Data;
 using ari2._0.Models;
+using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
     public class CustomerPublicStatusTypesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICustomerPublicStatusTypeService _service;
 
-        public CustomerPublicStatusTypesController(ApplicationDbContext context)
+        public CustomerPublicStatusTypesController(ICustomerPublicStatusTypeService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: CustomerPublicStatusTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.CustomerPublicStatusTypes.ToListAsync());
+            return View(await _service.GetAllAsync());
         }
 
-        // GET: CustomerPublicStatusTypes/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var customerPublicStatusType = await _context.CustomerPublicStatusTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (customerPublicStatusType == null)
-            {
-                return NotFound();
-            }
-
-            return View(customerPublicStatusType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // GET: CustomerPublicStatusTypes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: CustomerPublicStatusTypes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] CustomerPublicStatusType customerPublicStatusType)
+        public async Task<IActionResult> Create([Bind("Id,Name,SystemName,Order,IsPrivate,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] CustomerPublicStatusType type)
         {
             if (ModelState.IsValid)
             {
-                customerPublicStatusType.Id = Guid.NewGuid();
-                _context.Add(customerPublicStatusType);
-                await _context.SaveChangesAsync();
+                await _service.CreateAsync(type);
                 return RedirectToAction(nameof(Index));
             }
-            return View(customerPublicStatusType);
+            return View(type);
         }
 
-        // GET: CustomerPublicStatusTypes/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var customerPublicStatusType = await _context.CustomerPublicStatusTypes.FindAsync(id);
-            if (customerPublicStatusType == null)
-            {
-                return NotFound();
-            }
-            return View(customerPublicStatusType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // POST: CustomerPublicStatusTypes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] CustomerPublicStatusType customerPublicStatusType)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,SystemName,Order,IsPrivate,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] CustomerPublicStatusType type)
         {
-            if (id != customerPublicStatusType.Id)
-            {
-                return NotFound();
-            }
-
+            if (id != type.Id) return NotFound();
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(customerPublicStatusType);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CustomerPublicStatusTypeExists(customerPublicStatusType.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                await _service.UpdateAsync(type);
                 return RedirectToAction(nameof(Index));
             }
-            return View(customerPublicStatusType);
+            return View(type);
         }
 
-        // GET: CustomerPublicStatusTypes/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var customerPublicStatusType = await _context.CustomerPublicStatusTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (customerPublicStatusType == null)
-            {
-                return NotFound();
-            }
-
-            return View(customerPublicStatusType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // POST: CustomerPublicStatusTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var customerPublicStatusType = await _context.CustomerPublicStatusTypes.FindAsync(id);
-            if (customerPublicStatusType != null)
-            {
-                _context.CustomerPublicStatusTypes.Remove(customerPublicStatusType);
-            }
-
-            await _context.SaveChangesAsync();
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool CustomerPublicStatusTypeExists(Guid id)
-        {
-            return _context.CustomerPublicStatusTypes.Any(e => e.Id == id);
         }
     }
 }

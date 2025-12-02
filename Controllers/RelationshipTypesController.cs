@@ -1,158 +1,85 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using ari2._0.Data;
 using ari2._0.Models;
+using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
     public class RelationshipTypesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IRelationshipTypeService _service;
 
-        public RelationshipTypesController(ApplicationDbContext context)
+        public RelationshipTypesController(IRelationshipTypeService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: RelationshipTypes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.RelationshipTypes.ToListAsync());
+            return View(await _service.GetAllAsync());
         }
 
-        // GET: RelationshipTypes/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var relationshipType = await _context.RelationshipTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (relationshipType == null)
-            {
-                return NotFound();
-            }
-
-            return View(relationshipType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // GET: RelationshipTypes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: RelationshipTypes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] RelationshipType relationshipType)
+        public async Task<IActionResult> Create([Bind("Id,Name,ParentId,SystemName,IsPercentage,IsAllowed,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] RelationshipType type)
         {
             if (ModelState.IsValid)
             {
-                relationshipType.Id = Guid.NewGuid();
-                _context.Add(relationshipType);
-                await _context.SaveChangesAsync();
+                await _service.CreateAsync(type);
                 return RedirectToAction(nameof(Index));
             }
-            return View(relationshipType);
+            return View(type);
         }
 
-        // GET: RelationshipTypes/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var relationshipType = await _context.RelationshipTypes.FindAsync(id);
-            if (relationshipType == null)
-            {
-                return NotFound();
-            }
-            return View(relationshipType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // POST: RelationshipTypes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] RelationshipType relationshipType)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,ParentId,SystemName,IsPercentage,IsAllowed,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] RelationshipType type)
         {
-            if (id != relationshipType.Id)
-            {
-                return NotFound();
-            }
-
+            if (id != type.Id) return NotFound();
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(relationshipType);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RelationshipTypeExists(relationshipType.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                await _service.UpdateAsync(type);
                 return RedirectToAction(nameof(Index));
             }
-            return View(relationshipType);
+            return View(type);
         }
 
-        // GET: RelationshipTypes/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var relationshipType = await _context.RelationshipTypes
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (relationshipType == null)
-            {
-                return NotFound();
-            }
-
-            return View(relationshipType);
+            if (id == null) return NotFound();
+            var type = await _service.GetByIdAsync(id.Value);
+            if (type == null) return NotFound();
+            return View(type);
         }
 
-        // POST: RelationshipTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var relationshipType = await _context.RelationshipTypes.FindAsync(id);
-            if (relationshipType != null)
-            {
-                _context.RelationshipTypes.Remove(relationshipType);
-            }
-
-            await _context.SaveChangesAsync();
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool RelationshipTypeExists(Guid id)
-        {
-            return _context.RelationshipTypes.Any(e => e.Id == id);
         }
     }
 }

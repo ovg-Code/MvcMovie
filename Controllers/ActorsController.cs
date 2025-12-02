@@ -1,158 +1,100 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using ari2._0.Data;
 using ari2._0.Models;
+using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
     public class ActorsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IActorService _service;
 
-        public ActorsController(ApplicationDbContext context)
+        public ActorsController(IActorService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: Actors
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Actors.ToListAsync());
+            var actors = await _service.GetAllAsync();
+            return View(actors);
         }
 
-        // GET: Actors/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var actor = await _context.Actors
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (actor == null)
-            {
-                return NotFound();
-            }
-
+            if (id == null) return NotFound();
+            
+            var actor = await _service.GetByIdAsync(id.Value);
+            if (actor == null) return NotFound();
+            
             return View(actor);
         }
 
-        // GET: Actors/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Actors/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ActorTypesId,GendersId,NationalityCountriesId,Title,Prefix,Suffix,IsPep,FirstFirstName,SecondFirstName,LastFirstName,LastSecondName,BirthdayAt,OtherData,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Actor actor)
         {
             if (ModelState.IsValid)
             {
-                actor.Id = Guid.NewGuid();
-                _context.Add(actor);
-                await _context.SaveChangesAsync();
+                await _service.CreateAsync(actor);
                 return RedirectToAction(nameof(Index));
             }
             return View(actor);
         }
 
-        // GET: Actors/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var actor = await _context.Actors.FindAsync(id);
-            if (actor == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
+            
+            var actor = await _service.GetByIdAsync(id.Value);
+            if (actor == null) return NotFound();
+            
             return View(actor);
         }
 
-        // POST: Actors/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid id, [Bind("Id,ActorTypesId,GendersId,NationalityCountriesId,Title,Prefix,Suffix,IsPep,FirstFirstName,SecondFirstName,LastFirstName,LastSecondName,BirthdayAt,OtherData,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Actor actor)
         {
-            if (id != actor.Id)
-            {
-                return NotFound();
-            }
+            if (id != actor.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(actor);
-                    await _context.SaveChangesAsync();
+                    await _service.UpdateAsync(actor);
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception)
                 {
-                    if (!ActorExists(actor.Id))
-                    {
+                    if (!await _service.ExistsAsync(actor.Id))
                         return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(actor);
         }
 
-        // GET: Actors/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var actor = await _context.Actors
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (actor == null)
-            {
-                return NotFound();
-            }
-
+            if (id == null) return NotFound();
+            
+            var actor = await _service.GetByIdAsync(id.Value);
+            if (actor == null) return NotFound();
+            
             return View(actor);
         }
 
-        // POST: Actors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var actor = await _context.Actors.FindAsync(id);
-            if (actor != null)
-            {
-                _context.Actors.Remove(actor);
-            }
-
-            await _context.SaveChangesAsync();
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool ActorExists(Guid id)
-        {
-            return _context.Actors.Any(e => e.Id == id);
         }
     }
 }

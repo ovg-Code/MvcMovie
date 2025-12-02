@@ -1,158 +1,100 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using ari2._0.Data;
 using ari2._0.Models;
+using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
     public class AddressesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IAddressService _service;
 
-        public AddressesController(ApplicationDbContext context)
+        public AddressesController(IAddressService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: Addresss
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Addresses.ToListAsync());
+            var addresses = await _service.GetAllAsync();
+            return View(addresses);
         }
 
-        // GET: Addresss/Details/5
         public async Task<IActionResult> Details(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var address = await _context.Addresses
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (address == null)
-            {
-                return NotFound();
-            }
-
+            if (id == null) return NotFound();
+            
+            var address = await _service.GetByIdAsync(id.Value);
+            if (address == null) return NotFound();
+            
             return View(address);
         }
 
-        // GET: Addresss/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Addresss/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ActorsId,AddressTypesId,ZipCodesId,Line1,Line2,Latitude,Longitude,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Address address)
+        public async Task<IActionResult> Create([Bind("Id,ActorsId,AddressTypesId,ZipCodesId,Street,Apartment,IsVerified,Latitude,Longitude,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Address address)
         {
             if (ModelState.IsValid)
             {
-                address.Id = Guid.NewGuid();
-                _context.Add(address);
-                await _context.SaveChangesAsync();
+                await _service.CreateAsync(address);
                 return RedirectToAction(nameof(Index));
             }
             return View(address);
         }
 
-        // GET: Addresss/Edit/5
         public async Task<IActionResult> Edit(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var address = await _context.Addresses.FindAsync(id);
-            if (address == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
+            
+            var address = await _service.GetByIdAsync(id.Value);
+            if (address == null) return NotFound();
+            
             return View(address);
         }
 
-        // POST: Addresss/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,ActorsId,AddressTypesId,ZipCodesId,Line1,Line2,Latitude,Longitude,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Address address)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Id,ActorsId,AddressTypesId,ZipCodesId,Street,Apartment,IsVerified,Latitude,Longitude,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Address address)
         {
-            if (id != address.Id)
-            {
-                return NotFound();
-            }
+            if (id != address.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(address);
-                    await _context.SaveChangesAsync();
+                    await _service.UpdateAsync(address);
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (Exception)
                 {
-                    if (!AddressExists(address.Id))
-                    {
+                    if (!await _service.ExistsAsync(address.Id))
                         return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
             return View(address);
         }
 
-        // GET: Addresss/Delete/5
         public async Task<IActionResult> Delete(Guid? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var address = await _context.Addresses
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (address == null)
-            {
-                return NotFound();
-            }
-
+            if (id == null) return NotFound();
+            
+            var address = await _service.GetByIdAsync(id.Value);
+            if (address == null) return NotFound();
+            
             return View(address);
         }
 
-        // POST: Addresss/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            var address = await _context.Addresses.FindAsync(id);
-            if (address != null)
-            {
-                _context.Addresses.Remove(address);
-            }
-
-            await _context.SaveChangesAsync();
+            await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool AddressExists(Guid id)
-        {
-            return _context.Addresses.Any(e => e.Id == id);
         }
     }
 }
