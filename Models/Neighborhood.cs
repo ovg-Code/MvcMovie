@@ -7,6 +7,7 @@ public class Neighborhood
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
     public Guid? MunicipalitiesId { get; set; }
     public string? Name { get; set; }
+    public string? Code { get; set; }
     public DateTime? CreatedAt { get; set; }
     public string? CreatedBy { get; set; }
     public DateTime? UpdatedAt { get; set; }

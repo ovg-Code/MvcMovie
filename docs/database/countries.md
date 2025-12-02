@@ -1,15 +1,11 @@
 # Tabla: countries
 
-## Descripción
-Catálogo de países.
-
 ## Estructura
 
 | Columna | Tipo | Nulable | Default | Descripción |
 |---------|------|---------|---------|-------------|
-| id | uuid | NO | uuid_generate_v4() | Identificador único |
-| name | varchar | NO | null | Nombre del país |
-| code | varchar | YES | null | Código ISO |
+| id | uuid | NO | uuid_generate_v7() | Identificador único |
+| name | varchar | YES | null |  |
 | created_at | timestamp | YES | CURRENT_TIMESTAMP | Fecha de creación |
 | created_by | varchar | YES | null | Usuario creador |
 | updated_at | timestamp | YES | CURRENT_TIMESTAMP | Fecha actualización |

@@ -8,8 +8,9 @@ public class Address
     public Guid? ActorsId { get; set; }
     public Guid? AddressTypesId { get; set; }
     public Guid? ZipCodesId { get; set; }
-    public string? Line1 { get; set; }
-    public string? Line2 { get; set; }
+    public string? Street { get; set; }
+    public string? Apartment { get; set; }
+    public bool? IsVerified { get; set; }
     public string? Latitude { get; set; }
     public string? Longitude { get; set; }
     public DateTime? CreatedAt { get; set; }

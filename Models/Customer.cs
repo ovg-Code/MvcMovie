@@ -7,6 +7,8 @@ public class Customer
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
     public Guid? ActorsId { get; set; }
     public Guid? CustomerPublicStatusTypesId { get; set; }
+    public bool? IsAgentRetention { get; set; }
+    public bool? IsLeasing { get; set; }
     public string? OtherData { get; set; }
     public DateTime? CreatedAt { get; set; }
     public string? CreatedBy { get; set; }

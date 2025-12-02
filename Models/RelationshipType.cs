@@ -5,7 +5,11 @@ namespace ari2._0.Models;
 public class RelationshipType
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
+    public Guid? ParentId { get; set; }
     public string? Name { get; set; }
+    public string? SystemName { get; set; }
+    public bool? IsPercentage { get; set; }
+    public bool? IsAllowed { get; set; }
     public DateTime? CreatedAt { get; set; }
     public string? CreatedBy { get; set; }
     public DateTime? UpdatedAt { get; set; }
