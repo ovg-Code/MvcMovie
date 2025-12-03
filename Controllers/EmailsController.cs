@@ -4,6 +4,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de emails.
+    /// </summary>
     public class EmailsController : Controller
     {
         private readonly IEmailService _service;

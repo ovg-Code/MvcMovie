@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para el catalogo de tipos de relacion.
+    /// </summary>
     public class RelationshipTypesController : Controller
     {
         private readonly IRelationshipTypeService _service;

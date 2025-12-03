@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para el catalogo de estados de cliente.
+    /// </summary>
     public class CustomerPublicStatusTypesController : Controller
     {
         private readonly ICustomerPublicStatusTypeService _service;

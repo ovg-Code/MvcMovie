@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ari2._0.Controllers;
 
+/// <summary>
+/// Controlador para operaciones de diagnostico y consulta de base de datos.
+/// </summary>
 public class DatabaseController : Controller
 {
     private readonly IConfiguration _configuration;

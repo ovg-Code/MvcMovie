@@ -4,6 +4,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de direcciones.
+    /// </summary>
     public class AddressesController : Controller
     {
         private readonly IAddressService _service;

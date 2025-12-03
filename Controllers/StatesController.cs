@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para el catalogo de estados.
+    /// </summary>
     public class StatesController : Controller
     {
         private readonly IStateService _service;

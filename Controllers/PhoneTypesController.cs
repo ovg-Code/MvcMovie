@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para el catalogo de tipos de telefono.
+    /// </summary>
     public class PhoneTypesController : Controller
     {
         private readonly IPhoneTypeService _service;

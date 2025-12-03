@@ -4,6 +4,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de actores.
+    /// </summary>
     public class ActorsController : Controller
     {
         private readonly IActorService _service;

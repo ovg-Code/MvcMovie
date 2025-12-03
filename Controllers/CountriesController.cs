@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary> 
+    /// Controlador MVC para la gestion del catalogo de paises.
+    /// </summary>
     public class CountriesController : Controller
     {
         private readonly ICountryService _service;
