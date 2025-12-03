@@ -3,12 +3,48 @@ using ari2._0.Models;
 
 namespace ari2._0.Data;
 
-/// <summary>
-/// Contexto de base de datos de Entity Framework Core para el sistema ARI 2.0.
-/// </summary>
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    public override int SaveChanges()
+    {
+        ConvertDatesToUtc();
+        return base.SaveChanges();
+    }
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        ConvertDatesToUtc();
+        return base.SaveChangesAsync(cancellationToken);
+    }
+
+    private void ConvertDatesToUtc()
+    {
+        var entries = ChangeTracker.Entries()
+            .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+
+        foreach (var entry in entries)
+        {
+            foreach (var property in entry.Properties)
+            {
+                if (property.Metadata.ClrType == typeof(DateTime) || property.Metadata.ClrType == typeof(DateTime?))
+                {
+                    if (property.CurrentValue != null && property.CurrentValue is DateTime dateTime)
+                    {
+                        if (dateTime.Kind == DateTimeKind.Unspecified)
+                        {
+                            property.CurrentValue = DateTime.SpecifyKind(dateTime, DateTimeKind.Utc);
+                        }
+                        else if (dateTime.Kind == DateTimeKind.Local)
+                        {
+                            property.CurrentValue = dateTime.ToUniversalTime();
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     // Catálogos
     public DbSet<Country> Countries { get; set; }
@@ -34,4 +70,11 @@ public class ApplicationDbContext : DbContext
     public DbSet<IdentityCard> IdentityCards { get; set; }
     public DbSet<ActorRelationship> ActorRelationships { get; set; }
     public DbSet<SocialNetwork> SocialNetworks { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Actor>()
+            .Property(a => a.OtherData)
+            .HasColumnType("jsonb");
+    }
 }

@@ -1,0 +1,159 @@
+/* ============================================
+   FORM VIEWS - Minimalista Profesional 2025
+   ============================================ */
+
+/* Header */
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: #1e3a8a;
+    letter-spacing: -0.5px;
+}
+
+.page-subtitle {
+    color: #64748b;
+    font-size: 0.9375rem;
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Form Sections */
+.form-section {
+    padding: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-section-title i {
+    font-size: 1rem;
+}
+
+/* Form Controls */
+.form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.625rem 1rem;
+    font-size: 0.9375rem;
+    transition: all 0.2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #1e40af;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+/* Textarea */
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Validation */
+.text-danger {
+    font-size: 0.8125rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary-custom {
+    background: #1e40af;
+    border: none;
+    color: white;
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-primary-custom:hover {
+    background: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+    color: white;
+}
+
+.btn-secondary-custom {
+    background: white;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-secondary-custom:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #475569;
+}
+
+/* Form Actions */
+.form-actions {
+    padding: 1.5rem 2rem;
+    background: #fafbfc;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+/* Required Indicator */
+.form-label:has(+ .form-control[required])::after,
+.form-label:has(+ .form-select[required])::after {
+    content: " *";
+    color: #dc2626;
+}
+
+/* Help Text */
+.form-text {
+    font-size: 0.8125rem;
+    color: #64748b;
+    margin-top: 0.25rem;
+}

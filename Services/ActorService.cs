@@ -4,7 +4,7 @@ using ari2._0.Repositories;
 namespace ari2._0.Services;
 
 /// <summary>
-/// Implementa la logica de negocio para la gestion de actores.
+/// Implementa la logica de negocio para actores.
 /// </summary>
 public class ActorService : IActorService
 {
@@ -18,6 +18,11 @@ public class ActorService : IActorService
     public async Task<IEnumerable<Actor>> GetAllAsync()
     {
         return await _repository.GetAllAsync();
+    }
+
+    public async Task<IEnumerable<dynamic>> GetAllWithRelationsAsync()
+    {
+        return await _repository.GetAllWithRelationsAsync();
     }
 
     public async Task<Actor?> GetByIdAsync(Guid id)

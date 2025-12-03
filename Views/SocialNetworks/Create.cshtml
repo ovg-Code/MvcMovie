@@ -1,73 +1,62 @@
-@model ari2._0.Models.SocialNetwork
-
+@model ari2._0.ViewModels.SocialNetworkCreateViewModel
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nueva Red Social";
+    Layout = "_LayoutDashboard";
 }
-
-<h1>Create</h1>
-
-<h4>SocialNetwork</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ActorsId" class="control-label"></label>
-                <input asp-for="ActorsId" class="form-control" />
-                <span asp-validation-for="ActorsId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Platform" class="control-label"></label>
-                <input asp-for="Platform" class="form-control" />
-                <span asp-validation-for="Platform" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProfileName" class="control-label"></label>
-                <input asp-for="ProfileName" class="form-control" />
-                <span asp-validation-for="ProfileName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ProfileUrl" class="control-label"></label>
-                <input asp-for="ProfileUrl" class="form-control" />
-                <span asp-validation-for="ProfileUrl" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedAt" class="control-label"></label>
-                <input asp-for="CreatedAt" class="form-control" />
-                <span asp-validation-for="CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
-                <input asp-for="CreatedBy" class="form-control" />
-                <span asp-validation-for="CreatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedAt" class="control-label"></label>
-                <input asp-for="UpdatedAt" class="form-control" />
-                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedBy" class="control-label"></label>
-                <input asp-for="UpdatedBy" class="form-control" />
-                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsEnabled" class="control-label"></label>
-                <input asp-for="IsEnabled" class="form-control" />
-                <span asp-validation-for="IsEnabled" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+@section Styles {
+    <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title mb-1">Nueva Red Social</h1>
+        <p class="page-subtitle mb-0">Complete la información de la red social</p>
     </div>
+    <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+    <div class="form-container">
+        <div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-share"></i>Información de la Red Social</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="ActorsId" class="form-label">Actor</label>
+                    <select asp-for="ActorsId" asp-items="Model.Actors" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ActorsId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Platform" class="form-label">Plataforma</label>
+                    <input asp-for="Platform" class="form-control" />
+                    <span asp-validation-for="Platform" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="ProfileName" class="form-label">Nombre de Perfil</label>
+                    <input asp-for="ProfileName" class="form-control" />
+                    <span asp-validation-for="ProfileName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="ProfileUrl" class="form-label">URL del Perfil</label>
+                    <input asp-for="ProfileUrl" class="form-control" type="url" />
+                    <span asp-validation-for="ProfileUrl" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-circle me-2"></i>Cancelar</a>
+            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-circle me-2"></i>Guardar</button>
+        </div>
+    </div>
+</form>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

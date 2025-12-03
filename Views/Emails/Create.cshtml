@@ -1,93 +1,76 @@
-@model ari2._0.Models.Email
-
+@model ari2._0.ViewModels.EmailCreateViewModel
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Nuevo Correo";
+    Layout = "_LayoutDashboard";
 }
-
-<h1>Create</h1>
-
-<h4>Email</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ActorsId" class="control-label"></label>
-                <input asp-for="ActorsId" class="form-control" />
-                <span asp-validation-for="ActorsId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Definition" class="control-label"></label>
-                <input asp-for="Definition" class="form-control" />
-                <span asp-validation-for="Definition" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsNotification" class="control-label"></label>
-                <input asp-for="IsNotification" class="form-control" />
-                <span asp-validation-for="IsNotification" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsUnsuscribed" class="control-label"></label>
-                <input asp-for="IsUnsuscribed" class="form-control" />
-                <span asp-validation-for="IsUnsuscribed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UnsuscribedAt" class="control-label"></label>
-                <input asp-for="UnsuscribedAt" class="form-control" />
-                <span asp-validation-for="UnsuscribedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsFailed" class="control-label"></label>
-                <input asp-for="IsFailed" class="form-control" />
-                <span asp-validation-for="IsFailed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="FaliledAt" class="control-label"></label>
-                <input asp-for="FaliledAt" class="form-control" />
-                <span asp-validation-for="FaliledAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsPrimary" class="control-label"></label>
-                <input asp-for="IsPrimary" class="form-control" />
-                <span asp-validation-for="IsPrimary" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedAt" class="control-label"></label>
-                <input asp-for="CreatedAt" class="form-control" />
-                <span asp-validation-for="CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
-                <input asp-for="CreatedBy" class="form-control" />
-                <span asp-validation-for="CreatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedAt" class="control-label"></label>
-                <input asp-for="UpdatedAt" class="form-control" />
-                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedBy" class="control-label"></label>
-                <input asp-for="UpdatedBy" class="form-control" />
-                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsEnabled" class="control-label"></label>
-                <input asp-for="IsEnabled" class="form-control" />
-                <span asp-validation-for="IsEnabled" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+@section Styles {
+    <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title mb-1">Nuevo Correo Electrónico</h1>
+        <p class="page-subtitle mb-0">Complete la información del correo</p>
     </div>
+    <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
+<form asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+    <div class="form-container">
+        <div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-envelope"></i>Información del Correo</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="ActorsId" class="form-label">Actor</label>
+                    <select asp-for="ActorsId" asp-items="Model.Actors" class="form-select" required>
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ActorsId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Definition" class="form-label">Correo Electrónico</label>
+                    <input asp-for="Definition" class="form-control" type="email" placeholder="ejemplo@correo.com" required />
+                    <span asp-validation-for="Definition" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="IsNotification" class="form-label">Notificaciones</label>
+                    <select asp-for="IsNotification" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="IsPrimary" class="form-label">Principal</label>
+                    <select asp-for="IsPrimary" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="IsUnsuscribed" class="form-label">Desuscrito</label>
+                    <select asp-for="IsUnsuscribed" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-actions">
+            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-circle me-2"></i>Cancelar</a>
+            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-circle me-2"></i>Guardar</button>
+        </div>
+    </div>
+</form>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

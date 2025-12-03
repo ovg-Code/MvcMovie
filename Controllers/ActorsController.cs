@@ -1,24 +1,32 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ari2._0.Models;
 using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
-    /// <summary>
-    /// Controlador MVC para la gestion de actores.
-    /// </summary>
     public class ActorsController : Controller
     {
         private readonly IActorService _service;
+        private readonly IActorTypeService _actorTypeService;
+        private readonly IGenderService _genderService;
+        private readonly ICountryService _countryService;
 
-        public ActorsController(IActorService service)
+        public ActorsController(
+            IActorService service,
+            IActorTypeService actorTypeService,
+            IGenderService genderService,
+            ICountryService countryService)
         {
             _service = service;
+            _actorTypeService = actorTypeService;
+            _genderService = genderService;
+            _countryService = countryService;
         }
 
         public async Task<IActionResult> Index()
         {
-            var actors = await _service.GetAllAsync();
+            var actors = await _service.GetAllWithRelationsAsync();
             return View(actors);
         }
 
@@ -32,8 +40,9 @@ namespace ari2._0.Controllers
             return View(actor);
         }
 
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            await LoadDropdownDataAsync();
             return View();
         }
 
@@ -46,6 +55,7 @@ namespace ari2._0.Controllers
                 await _service.CreateAsync(actor);
                 return RedirectToAction(nameof(Index));
             }
+            await LoadDropdownDataAsync();
             return View(actor);
         }
 
@@ -56,6 +66,7 @@ namespace ari2._0.Controllers
             var actor = await _service.GetByIdAsync(id.Value);
             if (actor == null) return NotFound();
             
+            await LoadDropdownDataAsync();
             return View(actor);
         }
 
@@ -79,6 +90,7 @@ namespace ari2._0.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            await LoadDropdownDataAsync();
             return View(actor);
         }
 
@@ -98,6 +110,17 @@ namespace ari2._0.Controllers
         {
             await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        private async Task LoadDropdownDataAsync()
+        {
+            var actorTypes = await _actorTypeService.GetAllAsync();
+            var genders = await _genderService.GetAllAsync();
+            var countries = await _countryService.GetAllAsync();
+
+            ViewBag.ActorTypes = new SelectList(actorTypes, "Id", "Name");
+            ViewBag.Genders = new SelectList(genders, "Id", "Name");
+            ViewBag.Countries = new SelectList(countries, "Id", "Name");
         }
     }
 }

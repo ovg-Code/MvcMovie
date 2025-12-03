@@ -3,6 +3,10 @@ using ari2._0.Data;
 using ari2._0.Repositories;
 using ari2._0.Services;
 
+
+// Configurar Npgsql para manejar DateTime sin zona horaria como UTC
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HLBNB8a3nmB2c8HESv+0yru+1u2oxvD76sds9CNy0h0=",
+  "Hash": "1QvuIWG5h/BbhBd80fyM37wumbcl8cSziOoeZP+1U1U=",
   "Source": "ari2.0",
   "BasePath": "_content/ari2.0",
   "Mode": "Default",
@@ -34,6 +34,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/css/views/form-views.css",
+      "SourceId": "ari2.0",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/",
+      "BasePath": "_content/ari2.0",
+      "RelativePath": "css/views/form-views.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/views/form-views.css"
+    },
+    {
+      "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/css/views/list-views.css",
+      "SourceId": "ari2.0",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/",
+      "BasePath": "_content/ari2.0",
+      "RelativePath": "css/views/list-views.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/views/list-views.css"
     },
     {
       "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/images/ari-v2-logo.png",
@@ -91,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/views/list-views.js",
+      "SourceId": "ari2.0",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/",
+      "BasePath": "_content/ari2.0",
+      "RelativePath": "js/views/list-views.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/views/list-views.js"
     }
   ]
 }

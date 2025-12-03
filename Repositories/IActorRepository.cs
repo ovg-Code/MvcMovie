@@ -7,4 +7,5 @@ namespace ari2._0.Repositories;
 /// </summary>
 public interface IActorRepository : IRepository<Actor>
 {
+    Task<IEnumerable<dynamic>> GetAllWithRelationsAsync();
 }
