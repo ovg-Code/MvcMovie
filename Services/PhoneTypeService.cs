@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para el catalogo de tipos de telefono.
+/// </summary>
 public class PhoneTypeService : IPhoneTypeService
 {
     private readonly IPhoneTypeRepository _repository;

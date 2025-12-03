@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para el catalogo de tipos de documento.
+/// </summary>
 public class IdentityCardTypeService : IIdentityCardTypeService
 {
     private readonly IIdentityCardTypeRepository _repository;

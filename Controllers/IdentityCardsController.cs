@@ -4,6 +4,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de documentos de identidad.
+    /// </summary>
     public class IdentityCardsController : Controller
     {
         private readonly IIdentityCardService _service;

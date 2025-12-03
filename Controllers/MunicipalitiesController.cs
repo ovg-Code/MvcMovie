@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para el catalogo de municipios.
+    /// </summary>
     public class MunicipalitiesController : Controller
     {
         private readonly IMunicipalityService _service;

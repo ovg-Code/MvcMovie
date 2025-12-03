@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para la gestion de relaciones entre actores.
+/// </summary>
 public class ActorRelationshipService : IActorRelationshipService
 {
     private readonly IActorRelationshipRepository _repository;

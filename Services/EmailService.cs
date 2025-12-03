@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para la gestion de emails.
+/// </summary>
 public class EmailService : IEmailService
 {
     private readonly IEmailRepository _repository;

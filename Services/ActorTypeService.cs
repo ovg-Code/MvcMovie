@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para el catalogo de tipos de actor.
+/// </summary>
 public class ActorTypeService : IActorTypeService
 {
     private readonly IActorTypeRepository _repository;

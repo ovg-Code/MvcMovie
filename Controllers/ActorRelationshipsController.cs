@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de relaciones entre actores.
+    /// </summary>
     public class ActorRelationshipsController : Controller
     {
         private readonly IActorRelationshipService _service;

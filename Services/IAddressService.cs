@@ -2,6 +2,9 @@ using ari2._0.Models;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Define las operaciones de negocio para la gestion de direcciones.
+/// </summary>
 public interface IAddressService
 {
     Task<IEnumerable<Address>> GetAllAsync();

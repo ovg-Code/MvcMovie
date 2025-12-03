@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de redes sociales.
+    /// </summary>
     public class SocialNetworksController : Controller
     {
         private readonly ISocialNetworkService _service;

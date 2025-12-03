@@ -6,6 +6,9 @@ using ari2._0.Services;
 
 namespace ari2._0.Controllers
 {
+    /// <summary>
+    /// Controlador MVC para la gestion de clientes.
+    /// </summary>
     public class CustomersController : Controller
     {
         private readonly ICustomerService _service;

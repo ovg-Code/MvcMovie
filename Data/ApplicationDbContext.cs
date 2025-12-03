@@ -3,6 +3,9 @@ using ari2._0.Models;
 
 namespace ari2._0.Data;
 
+/// <summary>
+/// Contexto de base de datos de Entity Framework Core para el sistema ARI 2.0.
+/// </summary>
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
