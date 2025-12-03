@@ -30,13 +30,18 @@ Fecha de revision: 03/12/2025
 
 ## Correcciones Requeridas
 
-### 1. Actor.cs - Campo BirthdayAt
+### 1. Actor.cs - Discrepancia en nombre de campo
 
-- **Archivo**: `Models/Actor.cs`
-- **Linea**: 19
-- **Problema**: El campo se llama `BirthdayAt`
-- **Correccion**: Debe ser `BirthDate` segun requerimiento linea 43: "birth_date en lugar de birthday"
-- **Estado**: Pendiente
+- **Archivo**: `Models/Actor.cs` vs `database.json`
+- **Problema**: 
+  - En C#: `BirthdayAt`
+  - En DB: `birthday_at` (línea 647 de database.json)
+  - Requerimiento: debería ser `birth_date` (según línea 43)
+- **Acción requerida**:
+  1. Coordinar si se cambia la base de datos a `birth_date`
+  2. O actualizar el modelo C# para que coincida con `birthday_at`
+  3. Actualizar la documentación según lo decidido
+- **Estado**: En revisión (depende de decisión de diseño)
 
 ### 2. Actor.cs - Tipo de dato IsPep
 
