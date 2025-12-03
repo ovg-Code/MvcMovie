@@ -6443,19 +6443,19 @@
     ]
   },
   "packageFolders": {
-    "/root/.nuget/packages/": {}
+    "/home/steven/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/ovasquez/workspace/MvcMovie/ari2.0.csproj",
+      "projectUniqueName": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/ari2.0.csproj",
       "projectName": "ari2.0",
-      "projectPath": "/mnt/c/Users/ovasquez/workspace/MvcMovie/ari2.0.csproj",
-      "packagesPath": "/root/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/ovasquez/workspace/MvcMovie/obj/",
+      "projectPath": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/ari2.0.csproj",
+      "packagesPath": "/home/steven/.nuget/packages/",
+      "outputPath": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/root/.nuget/NuGet/NuGet.Config"
+        "/home/steven/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -6473,6 +6473,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6527,7 +6532,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/steven/.dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
