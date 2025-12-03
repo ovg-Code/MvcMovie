@@ -1,11 +1,19 @@
 {
   "Files": [
     {
-      "Id": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/wwwroot/css/site.css",
+      "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/wwwroot/js/site.js",
+      "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/images/README.md",
+      "PackagePath": "staticwebassets/images/README.md"
+    },
+    {
+      "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/images/ari-v2-logo.png",
+      "PackagePath": "staticwebassets/images/ari-v2-logo.png"
+    },
+    {
+      "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ARI 2.0</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --sidebar-collapsed-width: 80px;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: var(--sidebar-width);
+            background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar.collapsed {
+            width: var(--sidebar-collapsed-width);
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .sidebar-brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .sidebar-logo {
+            max-width: 150px;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+        
+        .sidebar.collapsed .sidebar-logo {
+            max-width: 50px;
+        }
+        
+        .sidebar-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: background 0.2s;
+        }
+        
+        .sidebar-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .sidebar-nav {
+            padding: 1rem 0;
+        }
+        
+        .nav-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .nav-section-title {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 0.5rem;
+        }
+        
+        .sidebar.collapsed .nav-section-title {
+            display: none;
+        }
+        
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: all 0.2s;
+            gap: 0.75rem;
+            border-left: 3px solid transparent;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left-color: #60a5fa;
+        }
+        
+        .nav-link.active {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border-left-color: #60a5fa;
+        }
+        
+        .nav-link i {
+            font-size: 1.25rem;
+            width: 1.5rem;
+            text-align: center;
+        }
+        
+        .sidebar.collapsed .nav-link {
+            justify-content: center;
+            padding: 0.75rem 0.5rem;
+        }
+        
+        .sidebar.collapsed .nav-link span {
+            display: none;
+        }
+        
+        .main-content {
+            margin-left: var(--sidebar-width);
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+            background: #f8fafc;
+        }
+        
+        .sidebar.collapsed ~ .main-content {
+            margin-left: var(--sidebar-collapsed-width);
+        }
+        
+        .top-navbar {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .content-wrapper {
+            padding: 2rem;
+        }
+        
+        .stats-card {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stats-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .stats-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        @@media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+    
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="/" class="sidebar-brand">
+                <img src="~/images/ari-v2-logo.png" 
+                     alt="ARI 2.0" 
+                     class="sidebar-logo"
+                     asp-append-version="true">
+            </a>
+            <button class="sidebar-toggle" 
+                    onclick="toggleSidebar()" 
+                    aria-label="Alternar menú de navegación"
+                    aria-expanded="true">
+                <i class="bi bi-list" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <!-- Dashboard -->
+            <div class="nav-section">
+                <a asp-controller="Home" asp-action="Index" class="nav-link active">
+                    <i class="bi bi-house-door"></i>
+                    <span>Dashboard</span>
+                </a>
+            </div>
+            
+            <!-- Clientes -->
+            <div class="nav-section">
+                <div class="nav-section-title">Gestión de Clientes</div>
+                <a asp-controller="Actors" asp-action="Index" class="nav-link">
+                    <i class="bi bi-person"></i>
+                    <span>Actores</span>
+                </a>
+                <a asp-controller="Customers" asp-action="Index" class="nav-link">
+                    <i class="bi bi-people"></i>
+                    <span>Clientes</span>
+                </a>
+                <a asp-controller="ActorRelationships" asp-action="Index" class="nav-link">
+                    <i class="bi bi-diagram-3"></i>
+                    <span>Relaciones</span>
+                </a>
+            </div>
+            
+            <!-- Contacto -->
+            <div class="nav-section">
+                <div class="nav-section-title">Información de Contacto</div>
+                <a asp-controller="Phones" asp-action="Index" class="nav-link">
+                    <i class="bi bi-telephone"></i>
+                    <span>Teléfonos</span>
+                </a>
+                <a asp-controller="Emails" asp-action="Index" class="nav-link">
+                    <i class="bi bi-envelope"></i>
+                    <span>Correos</span>
+                </a>
+                <a asp-controller="Addresses" asp-action="Index" class="nav-link">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>Direcciones</span>
+                </a>
+                <a asp-controller="SocialNetworks" asp-action="Index" class="nav-link">
+                    <i class="bi bi-share"></i>
+                    <span>Redes Sociales</span>
+                </a>
+            </div>
+            
+            <!-- Identificación -->
+            <div class="nav-section">
+                <div class="nav-section-title">Identificación</div>
+                <a asp-controller="IdentityCards" asp-action="Index" class="nav-link">
+                    <i class="bi bi-card-text"></i>
+                    <span>Documentos</span>
+                </a>
+                <a asp-controller="IdentityCardTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-card-list"></i>
+                    <span>Tipos de Documento</span>
+                </a>
+            </div>
+            
+            <!-- Ubicaciones -->
+            <div class="nav-section">
+                <div class="nav-section-title">Ubicaciones</div>
+                <a asp-controller="Countries" asp-action="Index" class="nav-link">
+                    <i class="bi bi-globe"></i>
+                    <span>Países</span>
+                </a>
+                <a asp-controller="States" asp-action="Index" class="nav-link">
+                    <i class="bi bi-map"></i>
+                    <span>Estados</span>
+                </a>
+                <a asp-controller="Cities" asp-action="Index" class="nav-link">
+                    <i class="bi bi-building"></i>
+                    <span>Ciudades</span>
+                </a>
+                <a asp-controller="Municipalities" asp-action="Index" class="nav-link">
+                    <i class="bi bi-signpost"></i>
+                    <span>Municipios</span>
+                </a>
+                <a asp-controller="Neighborhoods" asp-action="Index" class="nav-link">
+                    <i class="bi bi-houses"></i>
+                    <span>Barrios</span>
+                </a>
+                <a asp-controller="ZipCodes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-mailbox"></i>
+                    <span>Códigos Postales</span>
+                </a>
+            </div>
+            
+            <!-- Catálogos -->
+            <div class="nav-section">
+                <div class="nav-section-title">Catálogos</div>
+                <a asp-controller="Genders" asp-action="Index" class="nav-link">
+                    <i class="bi bi-gender-ambiguous"></i>
+                    <span>Géneros</span>
+                </a>
+                <a asp-controller="ActorTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-person-badge"></i>
+                    <span>Tipos de Actor</span>
+                </a>
+                <a asp-controller="PhoneTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-phone"></i>
+                    <span>Tipos de Teléfono</span>
+                </a>
+                <a asp-controller="AddressTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-pin-map"></i>
+                    <span>Tipos de Dirección</span>
+                </a>
+                <a asp-controller="RelationshipTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-link-45deg"></i>
+                    <span>Tipos de Relación</span>
+                </a>
+                <a asp-controller="CustomerPublicStatusTypes" asp-action="Index" class="nav-link">
+                    <i class="bi bi-flag"></i>
+                    <span>Estados de Cliente</span>
+                </a>
+            </div>
+        </nav>
+    </aside>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navbar -->
+        <nav class="top-navbar">
+            <div>
+                <h5 class="mb-0">@ViewData["Title"]</h5>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <button class="btn btn-sm btn-outline-secondary d-md-none" onclick="toggleSidebar()">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle"></i> Usuario
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Perfil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Configuración</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Content -->
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+            
+            // En móvil, usar show en lugar de collapsed
+            if (window.innerWidth <= 768) {
+                sidebar.classList.toggle('show');
+            }
+        }
+        
+        // Cerrar sidebar en móvil al hacer clic fuera
+        document.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768) {
+                const sidebar = document.getElementById('sidebar');
+                const isClickInside = sidebar.contains(event.target);
+                const isToggleButton = event.target.closest('.sidebar-toggle');
+                
+                if (!isClickInside && !isToggleButton && sidebar.classList.contains('show')) {
+                    sidebar.classList.remove('show');
+                }
+            }
+        });
+        
+        // Marcar link activo
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

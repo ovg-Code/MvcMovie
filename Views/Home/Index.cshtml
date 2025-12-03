@@ -1,108 +1,138 @@
 @{
-    ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Dashboard";
+    Layout = "_LayoutDashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">ARIV2 CRM</h1>
-    <p class="lead">Sistema de Gestión de Relaciones con Clientes</p>
-</div>
-
-<div class="row mt-5">
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-primary text-white">
-                <h5>👥 Clientes</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><a asp-controller="Actors" asp-action="Index">Actores</a></li>
-                    <li><a asp-controller="Customers" asp-action="Index">Clientes</a></li>
-                    <li><a asp-controller="ActorRelationships" asp-action="Index">Relaciones</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-success text-white">
-                <h5>📞 Contacto</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><a asp-controller="Phones" asp-action="Index">Teléfonos</a></li>
-                    <li><a asp-controller="Emails" asp-action="Index">Correos Electrónicos</a></li>
-                    <li><a asp-controller="Addresses" asp-action="Index">Direcciones</a></li>
-                    <li><a asp-controller="SocialNetworks" asp-action="Index">Redes Sociales</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-info text-white">
-                <h5>🪪 Identificación</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><a asp-controller="IdentityCards" asp-action="Index">Documentos de Identidad</a></li>
-                    <li><a asp-controller="IdentityCardTypes" asp-action="Index">Tipos de Documento</a></li>
-                </ul>
+<!-- Hero Section con Logo -->
+<main role="main">
+    <section class="hero-welcome" aria-label="Bienvenida">
+        <div class="text-center">
+            <img src="~/images/ari-v2-logo.png" 
+                 alt="Logo ARI 2.0 - Sistema de Gestión de Relaciones con Clientes" 
+                 class="hero-logo"
+                 width="600"
+                 height="200"
+                 asp-append-version="true">
+            
+            <h1 class="welcome-text mt-4">¡Bienvenido a ARI!</h1>
+            
+            <div class="badges-container mt-4" role="list" aria-label="Características principales">
+                <div class="badge-item" role="listitem">
+                    <i class="bi bi-people-fill" aria-hidden="true"></i>
+                    <span>Gestión de Clientes</span>
+                </div>
+                <div class="badge-item" role="listitem">
+                    <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                    <span>Contactos</span>
+                </div>
+                <div class="badge-item" role="listitem">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    <span>Ubicaciones</span>
+                </div>
+                <div class="badge-item" role="listitem">
+                    <i class="bi bi-card-text" aria-hidden="true"></i>
+                    <span>Documentación</span>
+                </div>
+                <div class="badge-item" role="listitem">
+                    <i class="bi bi-diagram-3-fill" aria-hidden="true"></i>
+                    <span>Relaciones</span>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 
-<div class="row">
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-warning text-dark">
-                <h5>📍 Ubicaciones</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><a asp-controller="Countries" asp-action="Index">Países</a></li>
-                    <li><a asp-controller="States" asp-action="Index">Estados</a></li>
-                    <li><a asp-controller="Cities" asp-action="Index">Ciudades</a></li>
-                    <li><a asp-controller="Municipalities" asp-action="Index">Municipios</a></li>
-                    <li><a asp-controller="Neighborhoods" asp-action="Index">Barrios</a></li>
-                    <li><a asp-controller="ZipCodes" asp-action="Index">Códigos Postales</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-secondary text-white">
-                <h5>📋 Catálogos</h5>
-            </div>
-            <div class="card-body">
-                <ul class="list-unstyled">
-                    <li><a asp-controller="Genders" asp-action="Index">Géneros</a></li>
-                    <li><a asp-controller="ActorTypes" asp-action="Index">Tipos de Actor</a></li>
-                    <li><a asp-controller="PhoneTypes" asp-action="Index">Tipos de Teléfono</a></li>
-                    <li><a asp-controller="AddressTypes" asp-action="Index">Tipos de Dirección</a></li>
-                    <li><a asp-controller="RelationshipTypes" asp-action="Index">Tipos de Relación</a></li>
-                    <li><a asp-controller="CustomerPublicStatusTypes" asp-action="Index">Estados de Cliente</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card">
-            <div class="card-header bg-dark text-white">
-                <h5>📊 Estadísticas</h5>
-            </div>
-            <div class="card-body">
-                <p><strong>Total de Módulos:</strong> 21</p>
-                <p><strong>Controladores:</strong> 21</p>
-                <p><strong>Vistas:</strong> 105</p>
-                <p><strong>Base de Datos:</strong> PostgreSQL</p>
-                <p><strong>Framework:</strong> ASP.NET Core MVC</p>
-            </div>
-        </div>
-    </div>
-</div>
+<style>
+    .hero-welcome {
+        padding: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+    }
+    
+    .hero-logo {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .welcome-text {
+        color: #1e3a8a;
+        font-weight: 600;
+        font-size: 2rem;
+        animation: fadeIn 1s ease-out 0.3s both;
+    }
+    
+    .badges-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        animation: fadeIn 1s ease-out 0.6s both;
+    }
+    
+    .badge-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .badge-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    
+    .badge-item i {
+        font-size: 1.1rem;
+    }
+    
+    @@keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @@media (max-width: 768px) {
+        .hero-logo {
+            max-width: 90%;
+        }
+        
+        .welcome-text {
+            font-size: 1.5rem;
+        }
+        
+        .badges-container {
+            gap: 0.5rem;
+        }
+        
+        .badge-item {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+    }
+</style>

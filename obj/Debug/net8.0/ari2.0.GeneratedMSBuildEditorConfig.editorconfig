@@ -17,451 +17,455 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ari2.0
 build_property.RootNamespace = ari2.0
-build_property.ProjectDir = /mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/
+build_property.ProjectDir = /mnt/c/Users/ovasquez/workspace/MvcMovie/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0
+build_property.MSBuildProjectDirectory = /mnt/c/Users/ovasquez/workspace/MvcMovie
 build_property._RazorSourceGeneratorDebug = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorRelationships/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorRelationships/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorRelationships/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorRelationships/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorRelationships/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Actors/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Actors/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Actors/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Actors/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Actors/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ActorTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Addresses/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Addresses/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Addresses/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Addresses/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Addresses/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/AddressTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/AddressTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/AddressTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/AddressTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/AddressTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Cities/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Cities/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Cities/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Cities/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Cities/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Countries/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Countries/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Countries/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Countries/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Countries/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/CustomerPublicStatusTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/CustomerPublicStatusTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/CustomerPublicStatusTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/CustomerPublicStatusTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/CustomerPublicStatusTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Customers/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Customers/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Customers/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Customers/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Customers/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Emails/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Emails/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Emails/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Emails/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Emails/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Genders/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Genders/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Genders/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Genders/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Genders/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Home/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCards/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCards/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCards/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCards/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCards/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCardTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCardTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCardTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCardTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/IdentityCardTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Municipalities/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Municipalities/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Municipalities/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Municipalities/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Municipalities/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Neighborhoods/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Neighborhoods/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Neighborhoods/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Neighborhoods/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Neighborhoods/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Phones/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Phones/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Phones/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Phones/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Phones/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/PhoneTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/PhoneTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/PhoneTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/PhoneTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/PhoneTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/RelationshipTypes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/RelationshipTypes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/RelationshipTypes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/RelationshipTypes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/RelationshipTypes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Shared/_Layout.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_LayoutDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXREYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/SocialNetworks/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/SocialNetworks/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/SocialNetworks/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/SocialNetworks/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/SocialNetworks/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/States/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/States/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/States/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/States/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/States/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ZipCodes/Create.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ZipCodes/Delete.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ZipCodes/Details.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ZipCodes/Edit.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/ZipCodes/Index.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/_ViewImports.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/steve/Documents/workspace/Development/GrupoTx/ari2.0/Views/_ViewStart.cshtml]
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
