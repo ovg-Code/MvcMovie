@@ -292,7 +292,7 @@ namespace ari2._0.Repositories;
 public interface ICustomerRepository : IRepository<Customer>
 {
     Task<IEnumerable<Customer>> GetActiveCustomersAsync();
-    Task<Customer?> GetCustomerWithActorAsync(Guid id);
+    Task<Customer?> GetCustomerWithDetailsAsync(Guid id);
 }
 ```
 
@@ -314,7 +314,7 @@ public class CustomerRepository : Repository<Customer>, ICustomerRepository
             .ToListAsync();
     }
     
-    public async Task<Customer?> GetCustomerWithActorAsync(Guid id)
+    public async Task<Customer?> GetCustomerWithDetailsAsync(Guid id)
     {
         return await _context.Customers
             .Include(c => c.Actor)
