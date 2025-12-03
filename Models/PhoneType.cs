@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Catalogo de tipos de telefono (movil, trabajo, casa, oficina).
+/// </summary>
 public class PhoneType
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);

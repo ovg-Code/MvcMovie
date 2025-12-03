@@ -3,6 +3,9 @@ using ari2._0.Repositories;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Implementa la logica de negocio para el catalogo de codigos postales.
+/// </summary>
 public class ZipCodeService : IZipCodeService
 {
     private readonly IZipCodeRepository _repository;

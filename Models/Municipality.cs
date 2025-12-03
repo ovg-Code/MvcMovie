@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Catalogo de municipios de una ciudad.
+/// </summary>
 public class Municipality
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);

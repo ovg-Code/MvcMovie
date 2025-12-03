@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Representa una direccion de correo electronico asociada a un actor.
+/// </summary>
 public class Email
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);

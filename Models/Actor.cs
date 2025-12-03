@@ -2,6 +2,10 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Representa una persona o entidad en el sistema CRM.
+/// Es la entidad base asociada a clientes, telefonos, direcciones y datos de contacto.
+/// </summary>
 public class Actor
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
@@ -17,7 +21,12 @@ public class Actor
     public string? LastFirstName { get; set; }
     public string? LastSecondName { get; set; }
     public DateTime? BirthdayAt { get; set; }
+    
+    /// <summary>
+    /// Datos adicionales en formato JSON para informacion dinamica por proyecto.
+    /// </summary>
     public string? OtherData { get; set; }
+    
     public DateTime? CreatedAt { get; set; }
     public string? CreatedBy { get; set; }
     public DateTime? UpdatedAt { get; set; }

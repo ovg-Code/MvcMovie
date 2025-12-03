@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Catalogo de estados publicos del cliente.
+/// </summary>
 public class CustomerPublicStatusType
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);

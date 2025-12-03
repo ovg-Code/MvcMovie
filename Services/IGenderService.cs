@@ -2,6 +2,9 @@ using ari2._0.Models;
 
 namespace ari2._0.Services;
 
+/// <summary>
+/// Define las operaciones de negocio para el catalogo de generos.
+/// </summary>
 public interface IGenderService
 {
     Task<IEnumerable<Gender>> GetAllAsync();

@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Catalogo de tipos de direccion (casa, trabajo, fiscal, etc).
+/// </summary>
 public class AddressType
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);

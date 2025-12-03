@@ -3,6 +3,10 @@ using ari2._0.Data;
 
 namespace ari2._0.Repositories;
 
+/// <summary>
+/// Implementacion generica del patron Repository para operaciones CRUD.
+/// </summary>
+/// <typeparam name="T">Tipo de entidad.</typeparam>
 public class Repository<T> : IRepository<T> where T : class
 {
     protected readonly ApplicationDbContext _context;

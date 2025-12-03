@@ -4,6 +4,9 @@ using ari2._0.Models;
 
 namespace ari2._0.Repositories;
 
+/// <summary>
+/// Implementa el acceso a datos para la entidad Customer.
+/// </summary>
 public class CustomerRepository : Repository<Customer>, ICustomerRepository
 {
     public CustomerRepository(ApplicationDbContext context) : base(context)

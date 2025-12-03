@@ -2,6 +2,9 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
+/// <summary>
+/// Representa una relacion entre dos actores (padre-hijo, representante legal, etc).
+/// </summary>
 public class ActorRelationship
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
