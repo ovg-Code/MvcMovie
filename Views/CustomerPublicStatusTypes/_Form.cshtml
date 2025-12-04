@@ -1,0 +1,39 @@
+@model ari2._0.Models.CustomerPublicStatusType
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-tag"></i>Información</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Name" class="form-label">Nombre</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="SystemName" class="form-label">Nombre del Sistema</label>
+                    <input asp-for="SystemName" class="form-control" />
+                    <span asp-validation-for="SystemName" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Order" class="form-label">Orden</label>
+                    <input asp-for="Order" type="number" class="form-control" />
+                    <span asp-validation-for="Order" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsPrivate" class="form-label">Es Privado</label>
+                    <select asp-for="IsPrivate" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsPrivate" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

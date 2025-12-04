@@ -76,5 +76,96 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Actor>()
             .Property(a => a.OtherData)
             .HasColumnType("jsonb");
+
+        modelBuilder.Entity<Customer>()
+            .Property(c => c.OtherData)
+            .HasColumnType("jsonb");
+
+        // Configurar foreign keys para Actor
+        modelBuilder.Entity<Actor>()
+            .HasOne(a => a.ActorType)
+            .WithMany()
+            .HasForeignKey(a => a.ActorTypesId);
+
+        modelBuilder.Entity<Actor>()
+            .HasOne(a => a.Gender)
+            .WithMany()
+            .HasForeignKey(a => a.GendersId);
+
+        modelBuilder.Entity<Actor>()
+            .HasOne(a => a.NationalityCountry)
+            .WithMany()
+            .HasForeignKey(a => a.NationalityCountriesId);
+
+        // Configurar foreign keys explícitamente
+        modelBuilder.Entity<Customer>()
+            .HasOne(c => c.Actor)
+            .WithMany()
+            .HasForeignKey(c => c.ActorsId);
+
+        modelBuilder.Entity<Customer>()
+            .HasOne(c => c.CustomerPublicStatusType)
+            .WithMany()
+            .HasForeignKey(c => c.CustomerPublicStatusTypesId);
+
+        modelBuilder.Entity<Phone>()
+            .HasOne(p => p.Actor)
+            .WithMany()
+            .HasForeignKey(p => p.ActorsId);
+
+        modelBuilder.Entity<Phone>()
+            .HasOne(p => p.PhoneType)
+            .WithMany()
+            .HasForeignKey(p => p.PhoneTypesId);
+
+        modelBuilder.Entity<Email>()
+            .HasOne(e => e.Actor)
+            .WithMany()
+            .HasForeignKey(e => e.ActorsId);
+
+        modelBuilder.Entity<Address>()
+            .HasOne(a => a.Actor)
+            .WithMany()
+            .HasForeignKey(a => a.ActorsId);
+
+        modelBuilder.Entity<Address>()
+            .HasOne(a => a.AddressType)
+            .WithMany()
+            .HasForeignKey(a => a.AddressTypesId);
+
+        modelBuilder.Entity<Address>()
+            .HasOne(a => a.ZipCode)
+            .WithMany()
+            .HasForeignKey(a => a.ZipCodesId);
+
+        modelBuilder.Entity<IdentityCard>()
+            .HasOne(i => i.Actor)
+            .WithMany()
+            .HasForeignKey(i => i.ActorsId);
+
+        modelBuilder.Entity<IdentityCard>()
+            .HasOne(i => i.IdentityCardType)
+            .WithMany()
+            .HasForeignKey(i => i.IdcardTypesId);
+
+        modelBuilder.Entity<SocialNetwork>()
+            .HasOne(s => s.Actor)
+            .WithMany()
+            .HasForeignKey(s => s.ActorsId);
+
+        modelBuilder.Entity<ActorRelationship>()
+            .HasOne(ar => ar.ParentActor)
+            .WithMany()
+            .HasForeignKey(ar => ar.ParentId);
+
+        modelBuilder.Entity<ActorRelationship>()
+            .HasOne(ar => ar.ChildActor)
+            .WithMany()
+            .HasForeignKey(ar => ar.ChildId);
+
+        modelBuilder.Entity<ActorRelationship>()
+            .HasOne(ar => ar.RelationshipType)
+            .WithMany()
+            .HasForeignKey(ar => ar.RelationshipTypesId);
     }
 }

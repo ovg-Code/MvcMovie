@@ -1,0 +1,32 @@
+@model ari2._0.Models.ZipCode
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-geo-alt"></i>Información del Código Postal</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="NeighborhoodsId" class="form-label">Barrio</label>
+                    <select asp-for="NeighborhoodsId" asp-items="ViewBag.Neighborhoods" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="NeighborhoodsId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Name" class="form-label">Código Postal</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-toggle-on"></i>Estado</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+        </div>

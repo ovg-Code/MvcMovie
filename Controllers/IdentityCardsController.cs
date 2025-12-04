@@ -1,23 +1,26 @@
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using ari2._0.Models;
 using ari2._0.Services;
-using ari2._0.ViewModels;
-using ari2._0.Data;
 
 namespace ari2._0.Controllers
 {
     public class IdentityCardsController : Controller
     {
         private readonly IIdentityCardService _service;
-        private readonly ApplicationDbContext _context;
+        private readonly IActorService _actorService;
+        private readonly IIdentityCardTypeService _identityCardTypeService;
+        private readonly ICountryService _countryService;
 
-        public IdentityCardsController(IIdentityCardService service, ApplicationDbContext context)
+        public IdentityCardsController(IIdentityCardService service,
+            IActorService actorService,
+            IIdentityCardTypeService identityCardTypeService,
+            ICountryService countryService)
         {
             _service = service;
-            _context = context;
+            _actorService = actorService;
+            _identityCardTypeService = identityCardTypeService;
+            _countryService = countryService;
         }
 
         public async Task<IActionResult> Index()
@@ -35,34 +38,22 @@ namespace ari2._0.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var viewModel = new IdentityCardCreateViewModel
-            {
-                Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync(),
-                IdcardTypes = await _context.IdentityCardTypes.Where(i => i.IsEnabled == true).Select(i => new SelectListItem { Value = i.Id.ToString(), Text = i.Name }).ToListAsync()
-            };
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(IdentityCardCreateViewModel viewModel)
+        public async Task<IActionResult> Create(IdentityCard identityCard)
         {
             if (ModelState.IsValid)
             {
-                var identityCard = new IdentityCard
-                {
-                    ActorsId = viewModel.ActorsId,
-                    IdcardTypesId = viewModel.IdcardTypesId,
-                    Idcard = viewModel.Idcard,
-                    IsEnabled = viewModel.IsEnabled
-                };
                 await _service.CreateAsync(identityCard);
                 return RedirectToAction(nameof(Index));
             }
             
-            viewModel.Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync();
-            viewModel.IdcardTypes = await _context.IdentityCardTypes.Where(i => i.IsEnabled == true).Select(i => new SelectListItem { Value = i.Id.ToString(), Text = i.Name }).ToListAsync();
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View(identityCard);
         }
 
         public async Task<IActionResult> Edit(Guid? id)
@@ -70,6 +61,8 @@ namespace ari2._0.Controllers
             if (id == null) return NotFound();
             var identityCard = await _service.GetByIdAsync(id.Value);
             if (identityCard == null) return NotFound();
+            
+            await LoadDropdownDataAsync();
             return View(identityCard);
         }
 
@@ -83,6 +76,8 @@ namespace ari2._0.Controllers
                 await _service.UpdateAsync(identityCard);
                 return RedirectToAction(nameof(Index));
             }
+            
+            await LoadDropdownDataAsync();
             return View(identityCard);
         }
 
@@ -98,8 +93,33 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "IdentityCard eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque tiene datos relacionados. Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        private async Task LoadDropdownDataAsync()
+        {
+            var actors = await _actorService.GetAllAsync();
+            var identityCardTypes = await _identityCardTypeService.GetAllAsync();
+            var countries = await _countryService.GetAllAsync();
+            ViewBag.Actors = new SelectList(actors, "Id", "FirstFirstName");
+            ViewBag.IdentityCardTypes = new SelectList(identityCardTypes, "Id", "Name");
+            ViewBag.Countries = new SelectList(countries, "Id", "Name");
         }
     }
 }

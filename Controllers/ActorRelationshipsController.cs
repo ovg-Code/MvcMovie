@@ -1,23 +1,24 @@
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using ari2._0.Models;
 using ari2._0.Services;
-using ari2._0.ViewModels;
-using ari2._0.Data;
 
 namespace ari2._0.Controllers
 {
     public class ActorRelationshipsController : Controller
     {
         private readonly IActorRelationshipService _service;
-        private readonly ApplicationDbContext _context;
+        private readonly IActorService _actorService;
+        private readonly IRelationshipTypeService _relationshipTypeService;
 
-        public ActorRelationshipsController(IActorRelationshipService service, ApplicationDbContext context)
+        public ActorRelationshipsController(
+            IActorRelationshipService service,
+            IActorService actorService,
+            IRelationshipTypeService relationshipTypeService)
         {
             _service = service;
-            _context = context;
+            _actorService = actorService;
+            _relationshipTypeService = relationshipTypeService;
         }
 
         public async Task<IActionResult> Index()
@@ -35,39 +36,22 @@ namespace ari2._0.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync();
-            var viewModel = new ActorRelationshipCreateViewModel
-            {
-                ParentActors = actors,
-                ChildActors = actors,
-                RelationshipTypes = await _context.RelationshipTypes.Where(r => r.IsEnabled == true).Select(r => new SelectListItem { Value = r.Id.ToString(), Text = r.Name }).ToListAsync()
-            };
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(ActorRelationshipCreateViewModel viewModel)
+        public async Task<IActionResult> Create(ActorRelationship actorRelationship)
         {
             if (ModelState.IsValid)
             {
-                var actorRelationship = new ActorRelationship
-                {
-                    ParentId = viewModel.ParentId,
-                    ChildId = viewModel.ChildId,
-                    RelationshipTypesId = viewModel.RelationshipTypesId,
-                    IsPercentage = viewModel.IsPercentage,
-                    IsEnabled = viewModel.IsEnabled
-                };
                 await _service.CreateAsync(actorRelationship);
                 return RedirectToAction(nameof(Index));
             }
             
-            var actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync();
-            viewModel.ParentActors = actors;
-            viewModel.ChildActors = actors;
-            viewModel.RelationshipTypes = await _context.RelationshipTypes.Where(r => r.IsEnabled == true).Select(r => new SelectListItem { Value = r.Id.ToString(), Text = r.Name }).ToListAsync();
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View(actorRelationship);
         }
 
         public async Task<IActionResult> Edit(Guid? id)
@@ -75,6 +59,8 @@ namespace ari2._0.Controllers
             if (id == null) return NotFound();
             var actorRelationship = await _service.GetByIdAsync(id.Value);
             if (actorRelationship == null) return NotFound();
+            
+            await LoadDropdownDataAsync();
             return View(actorRelationship);
         }
 
@@ -88,6 +74,8 @@ namespace ari2._0.Controllers
                 await _service.UpdateAsync(actorRelationship);
                 return RedirectToAction(nameof(Index));
             }
+            
+            await LoadDropdownDataAsync();
             return View(actorRelationship);
         }
 
@@ -103,8 +91,33 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "Relación eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque tiene datos relacionados. Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        private async Task LoadDropdownDataAsync()
+        {
+            var actors = await _actorService.GetAllAsync();
+            var relationshipTypes = await _relationshipTypeService.GetAllAsync();
+
+            ViewBag.ParentActors = new SelectList(actors, "Id", "FirstFirstName");
+            ViewBag.ChildActors = new SelectList(actors, "Id", "FirstFirstName");
+            ViewBag.RelationshipTypes = new SelectList(relationshipTypes, "Id", "Name");
         }
     }
 }

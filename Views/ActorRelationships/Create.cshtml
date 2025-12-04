@@ -1,6 +1,6 @@
-@model ari2._0.ViewModels.ActorRelationshipCreateViewModel
+@model ari2._0.Models.ActorRelationship
 @{
-    ViewData["Title"] = "Nueva Relación";
+    ViewData["Title"] = "Nuevo ActorRelationship";
     Layout = "_LayoutDashboard";
 }
 @section Styles {
@@ -8,56 +8,15 @@
 }
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
-        <h1 class="page-title mb-1">Nueva Relación</h1>
-        <p class="page-subtitle mb-0">Complete la información de la relación</p>
+        <h1 class="page-title mb-1">Nuevo ActorRelationship</h1>
+        <p class="page-subtitle mb-0">Complete la información</p>
     </div>
     <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
 <form asp-action="Create" method="post">
     <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
     <div class="form-container">
-        <div class="form-section">
-            <h6 class="form-section-title"><i class="bi bi-diagram-3"></i>Información de la Relación</h6>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label asp-for="ParentId" class="form-label">Actor Principal</label>
-                    <select asp-for="ParentId" asp-items="Model.ParentActors" class="form-select">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="ParentId" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="ChildId" class="form-label">Actor Relacionado</label>
-                    <select asp-for="ChildId" asp-items="Model.ChildActors" class="form-select">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="ChildId" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="RelationshipTypesId" class="form-label">Tipo de Relación</label>
-                    <select asp-for="RelationshipTypesId" asp-items="Model.RelationshipTypes" class="form-select">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="RelationshipTypesId" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsPercentage" class="form-label">Es Porcentaje</label>
-                    <select asp-for="IsPercentage" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsEnabled" class="form-label">Estado</label>
-                    <select asp-for="IsEnabled" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Activo</option>
-                        <option value="false">Inactivo</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+        @await Html.PartialAsync("_Form", Model)
         <div class="form-actions">
             <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-circle me-2"></i>Cancelar</a>
             <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-circle me-2"></i>Guardar</button>

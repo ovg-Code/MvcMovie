@@ -6,6 +6,8 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/views/list-views.css" asp-append-version="true" />
 }
+
+@await Html.PartialAsync("_AlertMessages")
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h1 class="page-title mb-1">Tipos de Identificación</h1>
@@ -47,8 +49,11 @@
                                 else { <span class="status-badge status-undefined"><i class="bi bi-circle"></i>Sin definir</span> }
                             </td>
                             <td class="text-end">
+                                <a asp-action="Details" asp-route-id="@item.Id" class="action-btn" title="Ver Detalles">
+                                    <i class="bi bi-eye"></i>
+                                </a>
                                 <a asp-action="Edit" asp-route-id="@item.Id" class="action-btn" title="Editar"><i class="bi bi-pencil"></i></a>
-                                <a asp-action="Delete" asp-route-id="@item.Id" class="action-btn delete" title="Eliminar"><i class="bi bi-trash"></i></a>
+                                <button type="button" data-delete-url="@Url.Action("Delete", new { id = item.Id })" data-item-name="Tipo de Documento" class="action-btn delete border-0 bg-transparent" title="Eliminar"><i class="bi bi-trash"></i></button>
                             </td>
                         </tr>
                     }

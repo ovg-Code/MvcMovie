@@ -2,9 +2,6 @@ using UUIDNext;
 
 namespace ari2._0.Models;
 
-/// <summary>
-/// Representa un numero de telefono asociado a un actor.
-/// </summary>
 public class Phone
 {
     public Guid Id { get; set; } = Uuid.NewDatabaseFriendly(Database.PostgreSql);
@@ -13,9 +10,14 @@ public class Phone
     public string? Number { get; set; }
     public string? Extension { get; set; }
     public bool? IsVerified { get; set; }
+    
     public DateTime? CreatedAt { get; set; }
     public string? CreatedBy { get; set; }
     public DateTime? UpdatedAt { get; set; }
     public string? UpdatedBy { get; set; }
     public bool? IsEnabled { get; set; }
+
+    // Navigation properties
+    public virtual Actor? Actor { get; set; }
+    public virtual PhoneType? PhoneType { get; set; }
 }

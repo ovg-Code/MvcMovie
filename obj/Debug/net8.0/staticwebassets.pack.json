@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/images/ari-v2-logo.png"
     },
     {
+      "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/delete-confirmation.js",
+      "PackagePath": "staticwebassets/js/delete-confirmation.js"
+    },
+    {
       "Id": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

@@ -1,0 +1,32 @@
+@model ari2._0.Models.Municipality
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-building"></i>Información</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="CitiesId" class="form-label">Ciudad</label>
+                    <select asp-for="CitiesId" asp-items="ViewBag.Cities" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="CitiesId" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Name" class="form-label">Nombre</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Code" class="form-label">Código</label>
+                    <input asp-for="Code" class="form-control" />
+                    <span asp-validation-for="Code" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

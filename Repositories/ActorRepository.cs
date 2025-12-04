@@ -13,6 +13,15 @@ public class ActorRepository : Repository<Actor>, IActorRepository
     {
     }
 
+    public override async Task<Actor?> GetByIdAsync(Guid id)
+    {
+        return await _dbSet
+            .Include(a => a.ActorType)
+            .Include(a => a.Gender)
+            .Include(a => a.NationalityCountry)
+            .FirstOrDefaultAsync(a => a.Id == id);
+    }
+
     public async Task<IEnumerable<dynamic>> GetAllWithRelationsAsync()
     {
         var result = await _context.Actors

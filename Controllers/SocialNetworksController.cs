@@ -1,23 +1,20 @@
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using ari2._0.Models;
 using ari2._0.Services;
-using ari2._0.ViewModels;
-using ari2._0.Data;
 
 namespace ari2._0.Controllers
 {
     public class SocialNetworksController : Controller
     {
         private readonly ISocialNetworkService _service;
-        private readonly ApplicationDbContext _context;
+        private readonly IActorService _actorService;
 
-        public SocialNetworksController(ISocialNetworkService service, ApplicationDbContext context)
+        public SocialNetworksController(ISocialNetworkService service,
+            IActorService actorService)
         {
             _service = service;
-            _context = context;
+            _actorService = actorService;
         }
 
         public async Task<IActionResult> Index()
@@ -35,33 +32,22 @@ namespace ari2._0.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var viewModel = new SocialNetworkCreateViewModel
-            {
-                Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync()
-            };
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SocialNetworkCreateViewModel viewModel)
+        public async Task<IActionResult> Create(SocialNetwork socialNetwork)
         {
             if (ModelState.IsValid)
             {
-                var socialNetwork = new SocialNetwork
-                {
-                    ActorsId = viewModel.ActorsId,
-                    Platform = viewModel.Platform,
-                    ProfileName = viewModel.ProfileName,
-                    ProfileUrl = viewModel.ProfileUrl,
-                    IsEnabled = viewModel.IsEnabled
-                };
                 await _service.CreateAsync(socialNetwork);
                 return RedirectToAction(nameof(Index));
             }
             
-            viewModel.Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync();
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View(socialNetwork);
         }
 
         public async Task<IActionResult> Edit(Guid? id)
@@ -69,6 +55,8 @@ namespace ari2._0.Controllers
             if (id == null) return NotFound();
             var socialNetwork = await _service.GetByIdAsync(id.Value);
             if (socialNetwork == null) return NotFound();
+            
+            await LoadDropdownDataAsync();
             return View(socialNetwork);
         }
 
@@ -82,6 +70,8 @@ namespace ari2._0.Controllers
                 await _service.UpdateAsync(socialNetwork);
                 return RedirectToAction(nameof(Index));
             }
+            
+            await LoadDropdownDataAsync();
             return View(socialNetwork);
         }
 
@@ -97,8 +87,29 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "SocialNetwork eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque tiene datos relacionados. Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        private async Task LoadDropdownDataAsync()
+        {
+            var actors = await _actorService.GetAllAsync();
+            ViewBag.Actors = new SelectList(actors, "Id", "FirstFirstName");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1QvuIWG5h/BbhBd80fyM37wumbcl8cSziOoeZP+1U1U=",
+  "Hash": "SlpynJLmrRZDZIQRgJaOCl3mDo2LEneN8k/6KDt3A/Q=",
   "Source": "ari2.0",
   "BasePath": "_content/ari2.0",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/README.md"
+    },
+    {
+      "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/delete-confirmation.js",
+      "SourceId": "ari2.0",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/",
+      "BasePath": "_content/ari2.0",
+      "RelativePath": "js/delete-confirmation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/delete-confirmation.js"
     },
     {
       "Identity": "/mnt/c/Users/ovasquez/workspace/MvcMovie/wwwroot/js/site.js",

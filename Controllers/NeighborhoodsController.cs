@@ -38,7 +38,7 @@ namespace ari2._0.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Code,MunicipalityId,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Neighborhood neighborhood)
+        public async Task<IActionResult> Create(Neighborhood neighborhood)
         {
             if (ModelState.IsValid)
             {
@@ -58,7 +58,7 @@ namespace ari2._0.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,Code,MunicipalityId,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Neighborhood neighborhood)
+        public async Task<IActionResult> Edit(Guid id, Neighborhood neighborhood)
         {
             if (id != neighborhood.Id) return NotFound();
             if (ModelState.IsValid)
@@ -81,8 +81,23 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "Barrio eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque tiene datos relacionados. Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
         }
     }
 }

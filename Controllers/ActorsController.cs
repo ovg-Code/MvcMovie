@@ -48,7 +48,7 @@ namespace ari2._0.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ActorTypesId,GendersId,NationalityCountriesId,Title,Prefix,Suffix,IsPep,FirstFirstName,SecondFirstName,LastFirstName,LastSecondName,BirthdayAt,OtherData,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Actor actor)
+        public async Task<IActionResult> Create(Actor actor)
         {
             if (ModelState.IsValid)
             {
@@ -72,7 +72,7 @@ namespace ari2._0.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Id,ActorTypesId,GendersId,NationalityCountriesId,Title,Prefix,Suffix,IsPep,FirstFirstName,SecondFirstName,LastFirstName,LastSecondName,BirthdayAt,OtherData,CreatedAt,CreatedBy,UpdatedAt,UpdatedBy,IsEnabled")] Actor actor)
+        public async Task<IActionResult> Edit(Guid id, Actor actor)
         {
             if (id != actor.Id) return NotFound();
 
@@ -108,8 +108,23 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "El actor ha sido eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este actor porque tiene registros relacionados (clientes, teléfonos, correos, direcciones, etc.). Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar el actor: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         private async Task LoadDropdownDataAsync()

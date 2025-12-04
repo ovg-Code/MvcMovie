@@ -1,0 +1,48 @@
+@model ari2._0.Models.Phone
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-telephone"></i>Información</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="ActorsId" class="form-label">Actor</label>
+                    <select asp-for="ActorsId" asp-items="ViewBag.Actors" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ActorsId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="PhoneTypesId" class="form-label">Tipo</label>
+                    <select asp-for="PhoneTypesId" asp-items="ViewBag.PhoneTypes" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="PhoneTypesId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Number" class="form-label">Número</label>
+                    <input asp-for="Number" class="form-control" />
+                    <span asp-validation-for="Number" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Extension" class="form-label">Extensión</label>
+                    <input asp-for="Extension" class="form-control" />
+                    <span asp-validation-for="Extension" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="IsVerified" class="form-label">Verificado</label>
+                    <select asp-for="IsVerified" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsVerified" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

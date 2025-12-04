@@ -1,0 +1,34 @@
+@model ari2._0.Models.IdentityCard
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-card-text"></i>Información</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="ActorsId" class="form-label">Actor</label>
+                    <select asp-for="ActorsId" asp-items="ViewBag.Actors" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ActorsId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="IdcardTypesId" class="form-label">Tipo</label>
+                    <select asp-for="IdcardTypesId" asp-items="ViewBag.IdentityCardTypes" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="IdcardTypesId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Idcard" class="form-label">Número de Documento</label>
+                    <input asp-for="Idcard" class="form-control" />
+                    <span asp-validation-for="Idcard" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

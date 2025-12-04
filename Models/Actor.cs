@@ -32,4 +32,9 @@ public class Actor
     public DateTime? UpdatedAt { get; set; }
     public string? UpdatedBy { get; set; }
     public bool? IsEnabled { get; set; }
+
+    // Navigation properties
+    public virtual ActorType? ActorType { get; set; }
+    public virtual Gender? Gender { get; set; }
+    public virtual Country? NationalityCountry { get; set; }
 }

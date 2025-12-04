@@ -21,4 +21,7 @@ public class Email
     public DateTime? UpdatedAt { get; set; }
     public string? UpdatedBy { get; set; }
     public bool? IsEnabled { get; set; }
+
+    // Navigation properties
+    public virtual Actor? Actor { get; set; }
 }

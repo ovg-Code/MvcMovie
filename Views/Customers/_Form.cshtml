@@ -1,0 +1,48 @@
+@model ari2._0.Models.Customer
+
+<div class="form-section">
+    <h6 class="form-section-title"><i class="bi bi-person-badge"></i>Información del Cliente</h6>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="ActorsId" class="form-label">Actor</label>
+            <select asp-for="ActorsId" asp-items="ViewBag.Actors" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="ActorsId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="CustomerPublicStatusTypesId" class="form-label">Estado Público</label>
+            <select asp-for="CustomerPublicStatusTypesId" asp-items="ViewBag.CustomerPublicStatusTypes" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="CustomerPublicStatusTypesId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="IsAgentRetention" class="form-label">Agente de Retención</label>
+            <select asp-for="IsAgentRetention" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="IsAgentRetention" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="IsLeasing" class="form-label">Leasing</label>
+            <select asp-for="IsLeasing" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="IsLeasing" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="IsEnabled" class="form-label">Estado</label>
+            <select asp-for="IsEnabled" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="true">Activo</option>
+                <option value="false">Inactivo</option>
+            </select>
+            <span asp-validation-for="IsEnabled" class="text-danger"></span>
+        </div>
+    </div>
+</div>

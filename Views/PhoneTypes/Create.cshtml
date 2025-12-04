@@ -6,40 +6,28 @@
 @section Styles {
     <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
 }
+
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h1 class="page-title mb-1">Nuevo Tipo de Teléfono</h1>
-        <p class="page-subtitle mb-0">Complete la información</p>
+        <p class="page-subtitle mb-0">Complete la información del registro</p>
     </div>
     <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
+
 <form asp-action="Create" method="post">
     <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+    
     <div class="form-container">
-        <div class="form-section">
-            <h6 class="form-section-title"><i class="bi bi-telephone"></i>Información</h6>
-            <div class="row g-3">
-                <div class="col-md-8">
-                    <label asp-for="Name" class="form-label">Nombre</label>
-                    <input asp-for="Name" class="form-control" placeholder="Ej: Móvil" required />
-                    <span asp-validation-for="Name" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsEnabled" class="form-label">Estado</label>
-                    <select asp-for="IsEnabled" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Activo</option>
-                        <option value="false">Inactivo</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+        @await Html.PartialAsync("_Form", Model)
+
         <div class="form-actions">
-            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-circle me-2"></i>Cancelar</a>
-            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-circle me-2"></i>Guardar</button>
+            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-lg me-2"></i>Guardar</button>
+            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-lg me-2"></i>Cancelar</a>
         </div>
     </div>
 </form>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

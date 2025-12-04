@@ -1,0 +1,97 @@
+@model ari2._0.Models.Actor
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-person"></i>Información General</h6>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label asp-for="ActorTypesId" class="form-label">Tipo de Actor</label>
+                    <select asp-for="ActorTypesId" asp-items="ViewBag.ActorTypes" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ActorTypesId" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="GendersId" class="form-label">Género</label>
+                    <select asp-for="GendersId" asp-items="ViewBag.Genders" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="GendersId" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="NationalityCountriesId" class="form-label">Nacionalidad</label>
+                    <select asp-for="NationalityCountriesId" asp-items="ViewBag.Countries" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="NationalityCountriesId" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-person-badge"></i>Nombres y Títulos</h6>
+            <div class="row g-3">
+                <div class="col-md-2">
+                    <label asp-for="Title" class="form-label">Título</label>
+                    <input asp-for="Title" class="form-control" placeholder="Dr., Ing." />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Prefix" class="form-label">Prefijo</label>
+                    <input asp-for="Prefix" class="form-control" />
+                    <span asp-validation-for="Prefix" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="FirstFirstName" class="form-label">Primer Nombre</label>
+                    <input asp-for="FirstFirstName" class="form-control" />
+                    <span asp-validation-for="FirstFirstName" class="text-danger"></span>
+                </div>
+                <div class="col-md-3">
+                    <label asp-for="SecondFirstName" class="form-label">Segundo Nombre</label>
+                    <input asp-for="SecondFirstName" class="form-control" />
+                    <span asp-validation-for="SecondFirstName" class="text-danger"></span>
+                </div>
+                <div class="col-md-2">
+                    <label asp-for="Suffix" class="form-label">Sufijo</label>
+                    <input asp-for="Suffix" class="form-control" placeholder="Jr., III" />
+                    <span asp-validation-for="Suffix" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="LastFirstName" class="form-label">Primer Apellido</label>
+                    <input asp-for="LastFirstName" class="form-control" />
+                    <span asp-validation-for="LastFirstName" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="LastSecondName" class="form-label">Segundo Apellido</label>
+                    <input asp-for="LastSecondName" class="form-control" />
+                    <span asp-validation-for="LastSecondName" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-calendar"></i>Información Adicional</h6>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label asp-for="BirthdayAt" class="form-label">Fecha de Nacimiento</label>
+                    <input asp-for="BirthdayAt" type="date" class="form-control" />
+                    <span asp-validation-for="BirthdayAt" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsPep" class="form-label">Es PEP</label>
+                    <select asp-for="IsPep" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsPep" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

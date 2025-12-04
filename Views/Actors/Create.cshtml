@@ -1,167 +1,33 @@
 @model ari2._0.Models.Actor
-
 @{
     ViewData["Title"] = "Nuevo Actor";
     Layout = "_LayoutDashboard";
 }
-
 @section Styles {
     <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
 }
 
-<!-- Header -->
 <div class="d-flex justify-content-between align-items-center mb-4">
     <div>
         <h1 class="page-title mb-1">Nuevo Actor</h1>
-        <p class="page-subtitle mb-0">Complete la información del actor</p>
+        <p class="page-subtitle mb-0">Complete la información del registro</p>
     </div>
-    <a asp-action="Index" class="btn btn-secondary-custom">
-        <i class="bi bi-arrow-left me-2"></i>Volver
-    </a>
+    <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
 
-<!-- Form -->
 <form asp-action="Create" method="post">
-    <input type="hidden" id="CreatedAt" name="CreatedAt" />
-    <input type="hidden" id="UpdatedAt" name="UpdatedAt" />
-    
     <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
     
     <div class="form-container">
-        <!-- Información Personal -->
-        <div class="form-section">
-            <h6 class="form-section-title">
-                <i class="bi bi-person"></i>
-                Información Personal
-            </h6>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label asp-for="FirstFirstName" class="form-label">Primer Nombre</label>
-                    <input asp-for="FirstFirstName" class="form-control" placeholder="Ej: Juan" required />
-                    <span asp-validation-for="FirstFirstName" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="SecondFirstName" class="form-label">Segundo Nombre</label>
-                    <input asp-for="SecondFirstName" class="form-control" placeholder="Ej: Carlos" />
-                    <span asp-validation-for="SecondFirstName" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="LastFirstName" class="form-label">Primer Apellido</label>
-                    <input asp-for="LastFirstName" class="form-control" placeholder="Ej: Pérez" required />
-                    <span asp-validation-for="LastFirstName" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="LastSecondName" class="form-label">Segundo Apellido</label>
-                    <input asp-for="LastSecondName" class="form-control" placeholder="Ej: García" />
-                    <span asp-validation-for="LastSecondName" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="BirthdayAt" class="form-label">Fecha de Nacimiento</label>
-                    <input asp-for="BirthdayAt" class="form-control" type="date" />
-                    <span asp-validation-for="BirthdayAt" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="GendersId" class="form-label">Género</label>
-                    <select asp-for="GendersId" class="form-select" asp-items="ViewBag.Genders">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="GendersId" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="NationalityCountriesId" class="form-label">Nacionalidad</label>
-                    <select asp-for="NationalityCountriesId" class="form-select" asp-items="ViewBag.Countries">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="NationalityCountriesId" class="text-danger"></span>
-                </div>
-            </div>
-        </div>
+        @await Html.PartialAsync("_Form", Model)
 
-        <!-- Información Adicional -->
-        <div class="form-section">
-            <h6 class="form-section-title">
-                <i class="bi bi-info-circle"></i>
-                Información Adicional
-            </h6>
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <label asp-for="ActorTypesId" class="form-label">Tipo de Actor</label>
-                    <select asp-for="ActorTypesId" class="form-select" asp-items="ViewBag.ActorTypes">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="ActorTypesId" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="Title" class="form-label">Título</label>
-                    <input asp-for="Title" class="form-control" placeholder="Ej: Dr., Ing." />
-                    <span asp-validation-for="Title" class="text-danger"></span>
-                </div>
-                <div class="col-md-2">
-                    <label asp-for="Prefix" class="form-label">Prefijo</label>
-                    <input asp-for="Prefix" class="form-control" placeholder="Ej: Sr." />
-                    <span asp-validation-for="Prefix" class="text-danger"></span>
-                </div>
-                <div class="col-md-2">
-                    <label asp-for="Suffix" class="form-label">Sufijo</label>
-                    <input asp-for="Suffix" class="form-control" placeholder="Ej: Jr." />
-                    <span asp-validation-for="Suffix" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="IsPep" class="form-label">¿Es PEP?</label>
-                    <select asp-for="IsPep" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
-                    </select>
-                    <span asp-validation-for="IsPep" class="text-danger"></span>
-                    <small class="form-text">Persona Expuesta Políticamente</small>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="IsEnabled" class="form-label">Estado</label>
-                    <select asp-for="IsEnabled" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Activo</option>
-                        <option value="false">Inactivo</option>
-                    </select>
-                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
-                </div>
-                <div class="col-12">
-                    <label asp-for="OtherData" class="form-label">Otros Datos (JSON)</label>
-                    <textarea asp-for="OtherData" class="form-control" rows="3" placeholder='{"key": "value"}'></textarea>
-                    <span asp-validation-for="OtherData" class="text-danger"></span>
-                    <small class="form-text">Formato JSON para datos adicionales</small>
-                </div>
-            </div>
-        </div>
-
-        <!-- Actions -->
         <div class="form-actions">
-            <a asp-action="Index" class="btn btn-secondary-custom">
-                <i class="bi bi-x-circle me-2"></i>Cancelar
-            </a>
-            <button type="submit" class="btn btn-primary-custom">
-                <i class="bi bi-check-circle me-2"></i>Guardar Actor
-            </button>
+            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-lg me-2"></i>Guardar</button>
+            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-lg me-2"></i>Cancelar</a>
         </div>
     </div>
 </form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    <script>
-        // Asignar fechas UTC para auditoría
-        const now = new Date().toISOString();
-        document.getElementById('CreatedAt').value = now;
-        document.getElementById('UpdatedAt').value = now;
-        
-        // Convertir BirthdayAt a UTC si tiene valor
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(e) {
-            const birthdayInput = document.querySelector('input[name="BirthdayAt"]');
-            if (birthdayInput && birthdayInput.value) {
-                const localDate = new Date(birthdayInput.value + 'T00:00:00');
-                birthdayInput.value = localDate.toISOString().split('T')[0];
-            }
-        });
-    </script>
 }

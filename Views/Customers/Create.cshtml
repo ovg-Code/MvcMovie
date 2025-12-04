@@ -1,4 +1,4 @@
-@model ari2._0.ViewModels.CustomerCreateViewModel
+@model ari2._0.Models.Customer
 @{
     ViewData["Title"] = "Nuevo Cliente";
     Layout = "_LayoutDashboard";
@@ -16,54 +16,7 @@
 <form asp-action="Create" method="post">
     <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
     <div class="form-container">
-        <div class="form-section">
-            <h6 class="form-section-title"><i class="bi bi-person-badge"></i>Información del Cliente</h6>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <label asp-for="ActorsId" class="form-label">Actor</label>
-                    <select asp-for="ActorsId" asp-items="Model.Actors" class="form-select">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="ActorsId" class="text-danger"></span>
-                </div>
-                <div class="col-md-6">
-                    <label asp-for="CustomerPublicStatusTypesId" class="form-label">Estado Público</label>
-                    <select asp-for="CustomerPublicStatusTypesId" asp-items="Model.CustomerPublicStatusTypes" class="form-select">
-                        <option value="">Seleccione...</option>
-                    </select>
-                    <span asp-validation-for="CustomerPublicStatusTypesId" class="text-danger"></span>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsAgentRetention" class="form-label">Agente de Retención</label>
-                    <select asp-for="IsAgentRetention" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsLeasing" class="form-label">Leasing</label>
-                    <select asp-for="IsLeasing" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label asp-for="IsEnabled" class="form-label">Estado</label>
-                    <select asp-for="IsEnabled" class="form-select">
-                        <option value="">Seleccione...</option>
-                        <option value="true">Activo</option>
-                        <option value="false">Inactivo</option>
-                    </select>
-                </div>
-                <div class="col-12">
-                    <label asp-for="OtherData" class="form-label">Otros Datos (JSON)</label>
-                    <textarea asp-for="OtherData" class="form-control" rows="3" placeholder='{"key": "value"}'></textarea>
-                    <small class="form-text">Formato JSON para datos adicionales</small>
-                </div>
-            </div>
-        </div>
+        @await Html.PartialAsync("_Form", Model)
         <div class="form-actions">
             <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-circle me-2"></i>Cancelar</a>
             <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-circle me-2"></i>Guardar</button>

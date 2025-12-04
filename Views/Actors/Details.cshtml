@@ -1,126 +1,140 @@
 @model ari2._0.Models.Actor
-
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles del Actor";
+    Layout = "_LayoutDashboard";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Actor</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ActorTypesId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ActorTypesId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GendersId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GendersId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NationalityCountriesId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NationalityCountriesId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Prefix)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Prefix)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Suffix)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Suffix)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsPep)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsPep)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FirstFirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstFirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SecondFirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SecondFirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastFirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastFirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastSecondName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastSecondName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.BirthdayAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.BirthdayAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.OtherData)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.OtherData)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedBy)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedBy)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsEnabled)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsEnabled)
-        </dd>
-    </dl>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title mb-1">@Model.FirstFirstName @Model.LastFirstName</h1>
+        <p class="page-subtitle mb-0">Detalles del Actor</p>
+    </div>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary-custom me-2">
+            <i class="bi bi-arrow-left me-2"></i>Volver
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary-custom">
+            <i class="bi bi-pencil me-2"></i>Editar
+        </a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="form-container mb-4">
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-person-badge"></i>Información Personal</h6>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Tipo de Actor</label>
+                        <p class="mb-0 fw-medium">@(Model.ActorType?.Name ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Género</label>
+                        <p class="mb-0 fw-medium">@(Model.Gender?.Name ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Nacionalidad</label>
+                        <p class="mb-0 fw-medium">@(Model.NationalityCountry?.Name ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Fecha de Nacimiento</label>
+                        <p class="mb-0 fw-medium">@(Model.BirthdayAt?.ToString("dd/MM/yyyy") ?? "-")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-card-text"></i>Nombres Completos</h6>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Primer Nombre</label>
+                        <p class="mb-0 fw-medium">@(Model.FirstFirstName ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Segundo Nombre</label>
+                        <p class="mb-0">@(Model.SecondFirstName ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Primer Apellido</label>
+                        <p class="mb-0 fw-medium">@(Model.LastFirstName ?? "-")</p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">Segundo Apellido</label>
+                        <p class="mb-0">@(Model.LastSecondName ?? "-")</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-tags"></i>Información Adicional</h6>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label text-muted small">Título</label>
+                        <p class="mb-0">@(Model.Title ?? "-")</p>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label text-muted small">Prefijo</label>
+                        <p class="mb-0">@(Model.Prefix ?? "-")</p>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label text-muted small">Sufijo</label>
+                        <p class="mb-0">@(Model.Suffix ?? "-")</p>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="form-label text-muted small">PEP (Persona Expuesta Políticamente)</label>
+                        <p class="mb-0">@(Model.IsPep ?? "-")</p>
+                    </div>
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.OtherData))
+            {
+                <div class="form-section">
+                    <h6 class="form-section-title"><i class="bi bi-code-square"></i>Otros Datos (JSON)</h6>
+                    <pre class="bg-light p-3 rounded mb-0"><code>@Model.OtherData</code></pre>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="form-container">
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-info-circle"></i>Estado</h6>
+                <div class="text-center py-3">
+                    @if (Model.IsEnabled == true) {
+                        <span class="status-badge status-active fs-5">
+                            <i class="bi bi-circle-fill"></i> Activo
+                        </span>
+                    } else if (Model.IsEnabled == false) {
+                        <span class="status-badge status-inactive fs-5">
+                            <i class="bi bi-circle-fill"></i> Inactivo
+                        </span>
+                    } else {
+                        <span class="status-badge status-undefined fs-5">
+                            <i class="bi bi-circle"></i> Sin definir
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-clock-history"></i>Auditoría</h6>
+                <div class="mb-3">
+                    <label class="form-label text-muted small">Creado</label>
+                    <p class="mb-0 small">@(Model.CreatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "-")</p>
+                    <p class="mb-0 text-muted small">Por: @(Model.CreatedBy ?? "-")</p>
+                </div>
+                <div>
+                    <label class="form-label text-muted small">Última Actualización</label>
+                    <p class="mb-0 small">@(Model.UpdatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "-")</p>
+                    <p class="mb-0 text-muted small">Por: @(Model.UpdatedBy ?? "-")</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

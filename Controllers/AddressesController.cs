@@ -1,23 +1,26 @@
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 using ari2._0.Models;
 using ari2._0.Services;
-using ari2._0.ViewModels;
-using ari2._0.Data;
 
 namespace ari2._0.Controllers
 {
     public class AddressesController : Controller
     {
         private readonly IAddressService _service;
-        private readonly ApplicationDbContext _context;
+        private readonly IActorService _actorService;
+        private readonly IAddressTypeService _addressTypeService;
+        private readonly IZipCodeService _zipCodeService;
 
-        public AddressesController(IAddressService service, ApplicationDbContext context)
+        public AddressesController(IAddressService service,
+            IActorService actorService,
+            IAddressTypeService addressTypeService,
+            IZipCodeService zipCodeService)
         {
             _service = service;
-            _context = context;
+            _actorService = actorService;
+            _addressTypeService = addressTypeService;
+            _zipCodeService = zipCodeService;
         }
 
         public async Task<IActionResult> Index()
@@ -35,41 +38,22 @@ namespace ari2._0.Controllers
 
         public async Task<IActionResult> Create()
         {
-            var viewModel = new AddressCreateViewModel
-            {
-                Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync(),
-                AddressTypes = await _context.AddressTypes.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.Name }).ToListAsync(),
-                ZipCodes = await _context.ZipCodes.Where(z => z.IsEnabled == true).Select(z => new SelectListItem { Value = z.Id.ToString(), Text = z.Name }).ToListAsync()
-            };
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(AddressCreateViewModel viewModel)
+        public async Task<IActionResult> Create(Address address)
         {
             if (ModelState.IsValid)
             {
-                var address = new Address
-                {
-                    ActorsId = viewModel.ActorsId,
-                    AddressTypesId = viewModel.AddressTypesId,
-                    ZipCodesId = viewModel.ZipCodesId,
-                    Street = viewModel.Street,
-                    Apartment = viewModel.Apartment,
-                    Latitude = viewModel.Latitude,
-                    Longitude = viewModel.Longitude,
-                    IsVerified = viewModel.IsVerified,
-                    IsEnabled = viewModel.IsEnabled
-                };
                 await _service.CreateAsync(address);
                 return RedirectToAction(nameof(Index));
             }
             
-            viewModel.Actors = await _context.Actors.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.FirstFirstName + " " + a.LastFirstName }).ToListAsync();
-            viewModel.AddressTypes = await _context.AddressTypes.Where(a => a.IsEnabled == true).Select(a => new SelectListItem { Value = a.Id.ToString(), Text = a.Name }).ToListAsync();
-            viewModel.ZipCodes = await _context.ZipCodes.Where(z => z.IsEnabled == true).Select(z => new SelectListItem { Value = z.Id.ToString(), Text = z.Name }).ToListAsync();
-            return View(viewModel);
+            await LoadDropdownDataAsync();
+            return View(address);
         }
 
         public async Task<IActionResult> Edit(Guid? id)
@@ -77,6 +61,8 @@ namespace ari2._0.Controllers
             if (id == null) return NotFound();
             var address = await _service.GetByIdAsync(id.Value);
             if (address == null) return NotFound();
+            
+            await LoadDropdownDataAsync();
             return View(address);
         }
 
@@ -90,6 +76,8 @@ namespace ari2._0.Controllers
                 await _service.UpdateAsync(address);
                 return RedirectToAction(nameof(Index));
             }
+            
+            await LoadDropdownDataAsync();
             return View(address);
         }
 
@@ -105,8 +93,33 @@ namespace ari2._0.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
-            await _service.DeleteAsync(id);
-            return RedirectToAction(nameof(Index));
+            try
+            {
+                await _service.DeleteAsync(id);
+                TempData["SuccessMessage"] = "Address eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Microsoft.EntityFrameworkCore.DbUpdateException ex) 
+                when (ex.InnerException is Npgsql.PostgresException pgEx && pgEx.SqlState == "23503")
+            {
+                TempData["ErrorMessage"] = "No se puede eliminar este registro porque tiene datos relacionados. Primero debe eliminar o reasignar los registros relacionados.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Error al eliminar: {ex.Message}";
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+        private async Task LoadDropdownDataAsync()
+        {
+            var actors = await _actorService.GetAllAsync();
+            var addressTypes = await _addressTypeService.GetAllAsync();
+            var zipCodes = await _zipCodeService.GetAllAsync();
+            ViewBag.Actors = new SelectList(actors, "Id", "FirstFirstName");
+            ViewBag.AddressTypes = new SelectList(addressTypes, "Id", "Name");
+            ViewBag.ZipCodes = new SelectList(zipCodes, "Id", "Name");
         }
     }
 }

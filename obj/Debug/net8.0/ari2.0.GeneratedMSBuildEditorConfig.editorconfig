@@ -30,10 +30,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0RlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,12 +42,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorRelationships/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JSZWxhdGlvbnNoaXBzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/Details.cshtml]
@@ -66,12 +62,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9DcmVhdGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Actors/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9EZWxldGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/Details.cshtml]
@@ -86,12 +82,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ActorTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWN0b3JUeXBlcy9fRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/Details.cshtml]
@@ -106,12 +102,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Addresses/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc2VzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/Details.cshtml]
@@ -126,12 +122,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/AddressTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRkcmVzc1R5cGVzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/Details.cshtml]
@@ -146,12 +142,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Cities/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2l0aWVzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/Details.cshtml]
@@ -166,12 +162,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9DcmVhdGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Countries/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291bnRyaWVzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9EZWxldGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/Details.cshtml]
@@ -186,12 +182,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/CustomerPublicStatusTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJQdWJsaWNTdGF0dXNUeXBlcy9fRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/Details.cshtml]
@@ -206,12 +202,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Customers/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXJzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/Details.cshtml]
@@ -226,12 +222,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9DcmVhdGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Emails/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRW1haWxzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9EZWxldGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/Details.cshtml]
@@ -246,16 +242,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Genders/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvR2VuZGVycy9fRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9DcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/Details.cshtml]
@@ -270,12 +266,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvQ3JlYXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCards/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkcy9fRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvRGVsZXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/Details.cshtml]
@@ -290,12 +286,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvQ3JlYXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/IdentityCardTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHlDYXJkVHlwZXMvX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvRGVsZXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/Details.cshtml]
@@ -310,12 +306,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9DcmVhdGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Municipalities/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXVuaWNpcGFsaXRpZXMvX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9EZWxldGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/Details.cshtml]
@@ -330,12 +326,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Neighborhoods/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTmVpZ2hib3Job29kcy9fRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/Details.cshtml]
@@ -350,12 +346,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9DcmVhdGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Phones/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9EZWxldGUuY3NodG1s
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/Details.cshtml]
@@ -370,12 +366,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvQ3JlYXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/PhoneTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGhvbmVUeXBlcy9fRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvRGVsZXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Details.cshtml]
@@ -388,6 +384,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/RelationshipTypes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVsYXRpb25zaGlwVHlwZXMvX0Zvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_AlertMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BbGVydE1lc3NhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_DeleteConfirmationModal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19EZWxldGVDb25maXJtYXRpb25Nb2RhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/Shared/_Layout.cshtml]
@@ -406,10 +414,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -422,12 +426,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0NyZWF0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/SocialNetworks/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29jaWFsTmV0d29ya3MvX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0RlbGV0ZS5jc2h0bWw=
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/Details.cshtml]
@@ -442,12 +446,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvQ3JlYXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/States/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3RhdGVzL19Gb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvRGVsZXRlLmNzaHRtbA==
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Details.cshtml]
@@ -460,6 +464,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/ZipCodes/_Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvWmlwQ29kZXMvX0Zvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/mnt/c/Users/ovasquez/workspace/MvcMovie/Views/_ViewImports.cshtml]

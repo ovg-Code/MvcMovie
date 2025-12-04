@@ -1,0 +1,65 @@
+@model ari2._0.Models.Address
+<div class="form-section">
+    <h6 class="form-section-title"><i class="bi bi-geo-alt"></i>Información</h6>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="ActorsId" class="form-label">Actor</label>
+            <select asp-for="ActorsId" asp-items="ViewBag.Actors" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="ActorsId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="AddressTypesId" class="form-label">Tipo</label>
+            <select asp-for="AddressTypesId" asp-items="ViewBag.AddressTypes" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="AddressTypesId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="ZipCodesId" class="form-label">Código Postal</label>
+            <select asp-for="ZipCodesId" asp-items="ViewBag.ZipCodes" class="form-select">
+                <option value="">Seleccione...</option>
+            </select>
+            <span asp-validation-for="ZipCodesId" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Street" class="form-label">Calle</label>
+            <input asp-for="Street" class="form-control" />
+            <span asp-validation-for="Street" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Apartment" class="form-label">Apartamento</label>
+            <input asp-for="Apartment" class="form-control" />
+            <span asp-validation-for="Apartment" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Latitude" class="form-label">Latitud</label>
+            <input asp-for="Latitude" class="form-control" placeholder="Ej: 10.4806" />
+            <span asp-validation-for="Latitude" class="text-danger"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Longitude" class="form-label">Longitud</label>
+            <input asp-for="Longitude" class="form-control" placeholder="Ej: -66.9036" />
+            <span asp-validation-for="Longitude" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="IsVerified" class="form-label">Verificada</label>
+            <select asp-for="IsVerified" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+            <span asp-validation-for="IsVerified" class="text-danger"></span>
+        </div>
+        <div class="col-md-3">
+            <label asp-for="IsEnabled" class="form-label">Estado</label>
+            <select asp-for="IsEnabled" class="form-select">
+                <option value="">Seleccione...</option>
+                <option value="true">Activo</option>
+                <option value="false">Inactivo</option>
+            </select>
+            <span asp-validation-for="IsEnabled" class="text-danger"></span>
+        </div>
+    </div>
+</div>

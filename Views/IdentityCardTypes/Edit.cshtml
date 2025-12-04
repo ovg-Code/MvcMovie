@@ -1,58 +1,33 @@
 @model ari2._0.Models.IdentityCardType
-
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Tipo de Documento";
+    Layout = "_LayoutDashboard";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
 }
 
-<h1>Edit</h1>
-
-<h4>IdentityCardType</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedAt" class="control-label"></label>
-                <input asp-for="CreatedAt" class="form-control" />
-                <span asp-validation-for="CreatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
-                <input asp-for="CreatedBy" class="form-control" />
-                <span asp-validation-for="CreatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedAt" class="control-label"></label>
-                <input asp-for="UpdatedAt" class="form-control" />
-                <span asp-validation-for="UpdatedAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UpdatedBy" class="control-label"></label>
-                <input asp-for="UpdatedBy" class="form-control" />
-                <span asp-validation-for="UpdatedBy" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsEnabled" class="control-label"></label>
-                <input asp-for="IsEnabled" class="form-control" />
-                <span asp-validation-for="IsEnabled" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title mb-1">Editar Tipo de Documento</h1>
+        <p class="page-subtitle mb-0">Modifique la información del registro</p>
     </div>
+    <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-arrow-left me-2"></i>Volver</a>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+    <input type="hidden" asp-for="Id" />
+    
+    <div class="form-container">
+        @await Html.PartialAsync("_Form", Model)
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary-custom"><i class="bi bi-check-lg me-2"></i>Guardar Cambios</button>
+            <a asp-action="Index" class="btn btn-secondary-custom"><i class="bi bi-x-lg me-2"></i>Cancelar</a>
+        </div>
+    </div>
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

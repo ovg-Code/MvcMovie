@@ -1,0 +1,50 @@
+@model ari2._0.Models.RelationshipType
+<div class="form-section">
+            <h6 class="form-section-title"><i class="bi bi-tag"></i>Información</h6>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="ParentId" class="form-label">Tipo Padre</label>
+                    <select asp-for="ParentId" asp-items="ViewBag.ParentTypes" class="form-select">
+                        <option value="">Seleccione...</option>
+                    </select>
+                    <span asp-validation-for="ParentId" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Name" class="form-label">Nombre</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="SystemName" class="form-label">Nombre del Sistema</label>
+                    <input asp-for="SystemName" class="form-control" />
+                    <span asp-validation-for="SystemName" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsPercentage" class="form-label">Es Porcentaje</label>
+                    <select asp-for="IsPercentage" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsPercentage" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsAllowed" class="form-label">Permitido</label>
+                    <select asp-for="IsAllowed" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsAllowed" class="text-danger"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="IsEnabled" class="form-label">Estado</label>
+                    <select asp-for="IsEnabled" class="form-select">
+                        <option value="">Seleccione...</option>
+                        <option value="true">Sí</option>
+                        <option value="false">No</option>
+                    </select>
+                    <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                </div>
+            </div>
+        </div>

@@ -1,54 +1,80 @@
 @model ari2._0.Models.Gender
-
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalles";
+    Layout = "_LayoutDashboard";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/views/form-views.css" asp-append-version="true" />
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Gender</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedBy)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedBy)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedAt)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedAt)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedBy)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedBy)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IsEnabled)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IsEnabled)
-        </dd>
-    </dl>
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="page-title mb-1">Detalles de Gender</h1>
+        <p class="page-subtitle mb-0">Información completa del registro</p>
+    </div>
+    <div>
+        <a asp-action="Index" class="btn btn-secondary-custom me-2">
+            <i class="bi bi-arrow-left me-2"></i>Volver
+        </a>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary-custom">
+            <i class="bi bi-pencil me-2"></i>Editar
+        </a>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="form-container mb-4">
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-info-circle"></i>Información</h6>
+                <dl class="row">
+                    @foreach (var prop in Model.GetType().GetProperties())
+                    {
+                        if (prop.Name != "Id" && !prop.Name.Contains("Created") && !prop.Name.Contains("Updated") && prop.Name != "IsEnabled")
+                        {
+                            <dt class="col-sm-4 text-muted small">@prop.Name</dt>
+                            <dd class="col-sm-8 mb-2">@(prop.GetValue(Model)?.ToString() ?? "-")</dd>
+                        }
+                    }
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <div class="form-container">
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-info-circle"></i>Estado</h6>
+                <div class="text-center py-3">
+                    @if (Model.IsEnabled == true) {
+                        <span class="status-badge status-active fs-5">
+                            <i class="bi bi-circle-fill"></i> Activo
+                        </span>
+                    } else if (Model.IsEnabled == false) {
+                        <span class="status-badge status-inactive fs-5">
+                            <i class="bi bi-circle-fill"></i> Inactivo
+                        </span>
+                    } else {
+                        <span class="status-badge status-undefined fs-5">
+                            <i class="bi bi-circle"></i> Sin definir
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h6 class="form-section-title"><i class="bi bi-clock-history"></i>Auditoría</h6>
+                <div class="mb-3">
+                    <label class="form-label text-muted small">Creado</label>
+                    <p class="mb-0 small">@(Model.CreatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "-")</p>
+                    <p class="mb-0 text-muted small">Por: @(Model.CreatedBy ?? "-")</p>
+                </div>
+                <div>
+                    <label class="form-label text-muted small">Última Actualización</label>
+                    <p class="mb-0 small">@(Model.UpdatedAt?.ToString("dd/MM/yyyy HH:mm") ?? "-")</p>
+                    <p class="mb-0 text-muted small">Por: @(Model.UpdatedBy ?? "-")</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

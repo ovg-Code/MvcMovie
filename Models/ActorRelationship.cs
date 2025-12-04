@@ -17,4 +17,9 @@ public class ActorRelationship
     public DateTime? UpdatedAt { get; set; }
     public string? UpdatedBy { get; set; }
     public bool? IsEnabled { get; set; }
+
+    // Navigation properties
+    public virtual Actor? ParentActor { get; set; }
+    public virtual Actor? ChildActor { get; set; }
+    public virtual RelationshipType? RelationshipType { get; set; }
 }
